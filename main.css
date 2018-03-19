@@ -1,0 +1,474 @@
+body{
+	/*background-image: url(http://hpfteam.free.fr/ressources/Twitter-ban/abstrice.jpg);*/
+	background-color: #BDBDBD;
+}
+#pagecentrale{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+}
+#pageinscription{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+	flex-wrap: wrap;
+}
+#pagecompte{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+	flex-wrap: wrap;
+}
+/* ------------------------------------Header page PHP-----------------------
+--------------------------------------------------------------------------- */
+#entete{
+	display: flex;
+	justify-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	height: 100px;
+	background-color: #BDBDBD;
+	position: sticky;
+	top: 0px;
+}
+#bandeau{
+	display: flex;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	height: 50px;
+	background-color: #333;
+	justify-content: space-between;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	border-right: 3px solid black;
+	position: sticky;
+}
+.onglet-accueil{
+	height: 100%;
+	width: 40%;
+	border-left: 3px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #4CAF50;
+}
+.onglet{
+	height: 100%;
+	width: 20%;
+	border-left: 3px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #333;
+}
+h1{
+	font-size: 20px;
+	font-family: Calibri;
+	color: white;
+	
+}
+h2{
+	font-size: 20px;
+	font-family: Calibri;
+	color: white;
+}
+a {
+	font-size: 20px;
+	font-family: Calibri;
+    text-decoration: none;
+    color: black;
+    display:inline-block;
+}
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background: #333;}
+ul li:hover ul {display: block;}
+ul li ul {
+	margin-left: 10px;
+	width: 250px;
+  display: none;
+}
+ul li ul li { 
+  background: #333; 
+  display: block; 
+}
+
+/* ------------------------------------Inscription page PHP-----------------------
+---------------------------------------------------------------------------------- */
+#Inscription{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	padding-top: 10%;
+	background-image: url(http://www.mintpersonnel.com.au/images/feature_puzzle_pieces.png);
+	background-size: 100% 100%;
+}
+#colonne{
+
+}
+#colonne2{
+padding-top: 5%;
+}
+
+#Cadre-Mdp_inscription{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 300px;
+	margin-left: 20px;
+	border-radius: 20px;
+	border: 3px black solid;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#Cadre-Nom{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+
+#Cadre-prenom{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+
+#Cadre-email{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	border-radius: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 3px black solid;
+}
+
+#Cadre-date_naissance{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 280px;
+	margin-left: 20px;
+	padding-left: 18px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+
+#Cadre-Confirm_Mdp{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: left;
+	background-color: white;
+	height: 40px;
+	width: 369px;
+	margin-left: 20px;
+	border-radius: 20px;
+	border: 3px black solid;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#Cadre{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 150px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+.pays{
+	margin-top: 5px;
+	padding-left: 40px;
+}
+.ville{
+	margin-top: 10px;
+	padding-left: 41px;
+}
+.rue{
+	margin-top: 10px;
+	padding-left: 44px;
+}
+.telephone{
+	margin-top: 10px;
+}
+.bouton_inscription{
+	align-self: center;
+	width: 120px;
+	height: 40px;
+	margin-right: 10px;
+	margin-left: 35%;
+	border-radius: 16px;
+	border: 3px black solid;
+	background-color: ;
+}
+
+h{
+	font-family: Calibri;
+}
+
+/* ------------------------------------Nav page PHP-----------------------
+--------------------------------------------------------------------------- */
+#Nav{
+	width: 40%;
+	margin-right: 2%;
+	margin-bottom: 40%;
+	margin-left: 2%;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#Nav2{
+	width: 100%;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/* ------------------------------------Menu-Connexion page PHP---------------
+--------------------------------------------------------------------------- */
+#Connexion{
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-family: Verdana;
+margin-left: 2%;
+padding-left: 50px;
+width:60%;
+margin-bottom: 50%;
+margin-top: 10%;
+background-image: url(http://imindstream.files.wordpress.com/2013/06/people-puzzle-pieces.png);
+background-size: cover;
+}
+
+#Cadre-nom{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 120px;
+	padding-left: 18px;
+	border-radius: 20px;
+	border: 3px grey inset;
+}
+#Cadre-Mdp{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 330px;
+	margin-left: 90px;
+	border-radius: 20px;
+	border: 3px grey inset;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.mot_de_passe{
+	align-self: center;
+	margin: 20px;
+}
+.Logo_connexion{
+	align-self: center;
+	padding-right: 30px;
+	padding-bottom: 20px;
+}
+
+.bouton_connection{
+	align-self: center;
+	width: 120px;
+	height: 40px;
+	margin-right: 10px;
+	margin-left: 40%;
+	margin-top: 5px;
+}
+
+/* ------------------------------------Partie Objets page PHP-----------------------
+----------------------------------------------------------------------------------- */
+
+
+#Liste_objets{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+flex-wrap: wrap;
+font-family: Verdana;
+width:100%;
+height: 70%;
+padding: 10%;
+
+}
+#Objet{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	width: 50%;
+}
+h3{
+	border:3px black solid;
+	border-radius: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 30px;
+	color: white;
+	background-color: black;
+	font-family: Calibri;
+}
+.disconnect{
+	align-self: center
+}
+#Lumiere{
+
+	display : flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
+#Volet{
+
+	display : flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
+#Television{
+
+	display : flex;
+	justify-content: center;
+    align-items: center;
+
+}
+
+.bouton_chaine{
+	height: 20px;
+	width: 200px;
+}
+
+#Cadre-type_objet{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 140px;
+	width: 160px;
+	margin-left: 120px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px grey inset;
+}
+
+#Cadre-etat_objet{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 120px;
+	width: 180px;
+	margin-left: 120px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px grey inset;
+}
+
+/* ------------------------------------Partie Compte page PHP-----------------------
+----------------------------------------------------------------------------------- */
+
+#Compte_client{
+display: flex;
+flex-wrap: : wrap;
+justify-content: space-around;
+align-items: center;
+font-family: Verdana;
+margin-top: 40px;
+margin-left: 20px;
+padding-right: 80px;
+padding-left: 80px;
+width: 100%;
+background-image: url(http://www.clker.com/cliparts/E/Y/U/T/U/O/jigsaw-puzzle-hi.png);
+background-size: 100% 100%;
+}
+
+#Cadre-modifier{
+	width: 50%;
+	padding-left: 30%;
+}
+
+#Compte{
+	display: flex;
+	flex-direction: column;
+	padding-top: 23%;
+	padding-left: 10%;
+}
+h4{
+	color: white;
+}
+h6{
+	border:3px black solid;
+	border-radius: 20px;
+	padding-left: 30px;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	font-family: Calibri;
+}
