@@ -36,7 +36,7 @@ body{
 	margin-left: 10%;
 	margin-right: 10%;
 	width: 80%;
-	height: 100px;
+	height: 140px;
 	background-color: #BDBDBD;
 	position: sticky;
 	top: 0px;
@@ -471,4 +471,24 @@ h6{
 	color: white;
 	background-color: black;
 	font-family: Calibri;
+}
+#defilement{
+	width: 990px;
+	height: 500px;
+	margin: 40px;
+}
+
+footer{
+	display: flex;
+	width: 80%;
+	margin-top: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 250px;
+	background-color: #333;
+	align-items: center;
+}
+#Carte{
+	display: flex;
+	margin-left: 20px;
 }

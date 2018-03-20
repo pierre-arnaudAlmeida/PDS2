@@ -1,7 +1,7 @@
 <header>
 
 	<div id="entete">
-		<image src="https://www.bevywise.com/images/device-manager.png" width="700" height="120"></image>
+		<image src="https://www.bevywise.com/images/device-manager.png" width="700" height="160"></image>
 	</div>
 
 	<div id="bandeau">
@@ -11,7 +11,7 @@
 		<div class="onglet">	
 			<ul>
     			<li>
-      				<a href="PageObjets.php"><h1>Objet</h1></a>
+      				<a href="PageObjets.php"><h1>Objets</h1></a>
       				<?php
 					if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 					echo '
