@@ -10,24 +10,7 @@ body{
 	height: 1000px;
 	background-color: #333;
 }
-#pageinscription{
-	display: flex;
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
-	height: 1000px;
-	background-color: #333;
-	flex-wrap: wrap;
-}
-#pagecompte{
-	display: flex;
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
-	height: 1000px;
-	background-color: #333;
-	flex-wrap: wrap;
-}
+
 /* ------------------------------------Header page PHP-----------------------
 --------------------------------------------------------------------------- */
 #entete{
@@ -152,9 +135,18 @@ ul li ul li {
   background: #333; 
   display: block; 
 }
-
 /* ------------------------------------Inscription page PHP-----------------------
 ---------------------------------------------------------------------------------- */
+#pageinscription{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+	flex-wrap: wrap;
+}
+
 #Inscription{
 	width: 100%;
 	height: 50%;
@@ -164,9 +156,11 @@ ul li ul li {
 	background-image: url(http://www.mintpersonnel.com.au/images/feature_puzzle_pieces.png);
 	background-size: 100% 100%;
 }
+
 #colonne{
 
 }
+
 #colonne2{
 padding-top: 5%;
 }
@@ -270,21 +264,26 @@ padding-top: 5%;
 	border-radius: 20px;
 	border: 3px black solid;
 }
+
 .pays{
 	margin-top: 5px;
 	padding-left: 40px;
 }
+
 .ville{
 	margin-top: 10px;
 	padding-left: 41px;
 }
+
 .rue{
 	margin-top: 10px;
 	padding-left: 44px;
 }
+
 .telephone{
 	margin-top: 10px;
 }
+
 .bouton_inscription{
 	align-self: center;
 	width: 120px;
@@ -305,7 +304,7 @@ h{
 #Nav{
 	width: 40%;
 	margin-right: 2%;
-	margin-bottom: 40%;
+	margin-bottom: 25%;
 	margin-left: 2%;
 	padding: 20px;
 	border-radius: 10px;
@@ -313,6 +312,7 @@ h{
 	flex-direction: column;
 	justify-content: center;
 }
+
 #Nav2{
 	width: 100%;
 	margin-right: 10%;
@@ -325,6 +325,15 @@ h{
 }
 /* ------------------------------------Menu-Connexion page PHP---------------
 --------------------------------------------------------------------------- */
+#pageconnexion{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 600px;
+	background-color: #333;
+}
+
 #Connexion{
 display: flex;
 flex-direction: column;
@@ -333,7 +342,7 @@ font-family: Verdana;
 margin-left: 2%;
 padding-left: 50px;
 width:60%;
-margin-bottom: 50%;
+margin-bottom: 25%;
 margin-top: 10%;
 background-image: url(http://imindstream.files.wordpress.com/2013/06/people-puzzle-pieces.png);
 background-size: cover;
@@ -352,6 +361,7 @@ background-size: cover;
 	border-radius: 20px;
 	border: 3px grey inset;
 }
+
 #Cadre-Mdp{
 	display: flex;
 	flex-direction: column;
@@ -365,10 +375,12 @@ background-size: cover;
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
+
 .mot_de_passe{
 	align-self: center;
 	margin: 20px;
 }
+
 .Logo_connexion{
 	align-self: center;
 	padding-right: 30px;
@@ -399,6 +411,7 @@ height: 70%;
 padding: 10%;
 
 }
+
 #Objet{
 	display: flex;
 	flex-direction: column;
@@ -406,6 +419,7 @@ padding: 10%;
 	align-items: center;
 	width: 50%;
 }
+
 h3{
 	border:3px black solid;
 	border-radius: 20px;
@@ -416,31 +430,27 @@ h3{
 	background-color: black;
 	font-family: Calibri;
 }
+
 .disconnect{
 	align-self: center
 }
-#Lumiere{
 
+#Lumiere{
 	display : flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-
 }
 
 #Volet{
-
 	display : flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-
 }
 
 #Television{
-
 	display : flex;
 	justify-content: center;
     align-items: center;
-
 }
 
 .bouton_chaine{
@@ -480,6 +490,15 @@ h3{
 
 /* ------------------------------------Partie Compte page PHP-----------------------
 ----------------------------------------------------------------------------------- */
+#pagecompte{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+	flex-wrap: wrap;
+}
 
 #Compte_client{
 display: flex;
@@ -507,9 +526,11 @@ background-size: 100% 100%;
 	padding-top: 23%;
 	padding-left: 10%;
 }
+
 h4{
 	color: white;
 }
+
 h6{
 	border:3px black solid;
 	border-radius: 20px;
@@ -519,12 +540,15 @@ h6{
 	background-color: black;
 	font-family: Calibri;
 }
+
 #defilement{
 	width: 990px;
 	height: 500px;
 	margin: 40px;
 }
 
+/* ------------------------------------Partie Compte page PHP-----------------------
+----------------------------------------------------------------------------------- */
 footer{
 	display: flex;
 	width: 80%;
@@ -535,7 +559,24 @@ footer{
 	background-color: #333;
 	align-items: center;
 }
+
 #Carte{
 	display: flex;
+	width: 60%;
 	margin-left: 20px;
+}
+#Lien{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 40%;
+	height: 160px;
+	padding: 20px;
+	margin-left: 10px;
+	border-left: 3px #BDBDBD solid;
+}
+a2{
+	font-size: 30px;
+	font-family: Calibri;
+	color: white;
 }
