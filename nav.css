@@ -1,0 +1,23 @@
+/* ------------------------------------Nav page PHP-----------------------
+--------------------------------------------------------------------------- */
+#Nav{
+	width: 40%;
+	margin-right: 2%;
+	margin-bottom: 25%;
+	margin-left: 2%;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#Nav2{
+	width: 100%;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

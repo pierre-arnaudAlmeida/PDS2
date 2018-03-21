@@ -1,0 +1,79 @@
+/* ------------------------------------Partie Objets page PHP-----------------------
+----------------------------------------------------------------------------------- */
+#Liste_objets{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	font-family: Verdana;
+	width:100%;
+	height: 70%;
+	padding: 10%;
+}
+#Objet{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	width: 50%;
+}
+h3{
+	border:3px black solid;
+	border-radius: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 30px;
+	color: white;
+	background-color: black;
+	font-family: Calibri;
+}
+.disconnect{
+	align-self: center
+}
+#Lumiere{
+	display : flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+#Volet{
+	display : flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+#Television{
+	display : flex;
+	justify-content: center;
+    align-items: center;
+}
+.bouton_chaine{
+	height: 20px;
+	width: 200px;
+}
+#Cadre-type_objet{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 140px;
+	width: 160px;
+	margin-left: 120px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px grey inset;
+}
+#Cadre-etat_objet{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 120px;
+	width: 180px;
+	margin-left: 120px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px grey inset;
+}

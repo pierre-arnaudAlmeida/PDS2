@@ -1,0 +1,53 @@
+/* ------------------------------------Partie Compte page PHP-----------------------
+----------------------------------------------------------------------------------- */
+#pagecompte{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+	flex-wrap: wrap;
+}
+#Compte_client{
+	display: flex;
+	flex-wrap: : wrap;
+	justify-content: space-around;
+	align-items: center;
+	font-family: Verdana;
+	margin-top: 40px;
+	margin-left: 20px;
+	padding-right: 80px;
+	padding-left: 80px;
+	width: 100%;
+	background-image: url(http://www.clker.com/cliparts/E/Y/U/T/U/O/jigsaw-puzzle-hi.png);
+	background-size: 100% 100%;
+}
+#Cadre-modifier{
+	width: 50%;
+	padding-left: 30%;
+}
+#Compte{
+	display: flex;
+	flex-direction: column;
+	padding-top: 23%;
+	padding-left: 10%;
+}
+h4{
+	color: white;
+}
+h6{
+	border:3px black solid;
+	border-radius: 20px;
+	padding-left: 13px;
+	padding-right: 13px;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	font-family: Calibri;
+}
+#defilement{
+	width: 990px;
+	height: 500px;
+	margin: 40px;
+}

@@ -1,0 +1,66 @@
+/* ------------------------------------Menu-Connexion page PHP---------------
+--------------------------------------------------------------------------- */
+#pageconnexion{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 600px;
+	background-color: #333;
+}
+#Connexion{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: Verdana;
+	margin-left: 2%;
+	padding-left: 50px;
+	width:60%;
+	margin-bottom: 25%;
+	margin-top: 10%;
+	background-image: url(http://imindstream.files.wordpress.com/2013/06/people-puzzle-pieces.png);
+	background-size: cover;
+}
+#Cadre-nom{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 120px;
+	padding-left: 18px;
+	border-radius: 20px;
+	border: 3px grey inset;
+}
+#Cadre-Mdp{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 330px;
+	margin-left: 90px;
+	border-radius: 20px;
+	border: 3px grey inset;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.mot_de_passe{
+	align-self: center;
+	margin: 20px;
+}
+.Logo_connexion{
+	align-self: center;
+	padding-right: 30px;
+	padding-bottom: 20px;
+}
+.bouton_connection{
+	align-self: center;
+	width: 120px;
+	height: 40px;
+	margin-right: 10px;
+	margin-left: 40%;
+	margin-top: 5px;
+}

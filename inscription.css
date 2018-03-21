@@ -1,0 +1,145 @@
+/* ------------------------------------Inscription page PHP-----------------------
+---------------------------------------------------------------------------------- */
+#pageinscription{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+	flex-wrap: wrap;
+}
+#Inscription{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	padding-top: 10%;
+	background-image: url(http://www.mintpersonnel.com.au/images/feature_puzzle_pieces.png);
+	background-size: 100% 100%;
+}
+#colonne2{
+padding-top: 5%;
+}
+#Cadre-Mdp_inscription{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 300px;
+	margin-left: 20px;
+	border-radius: 20px;
+	border: 3px black solid;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#Cadre-Nom{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+#Cadre-prenom{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+#Cadre-email{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	border-radius: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 3px black solid;
+}
+#Cadre-date_naissance{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 40px;
+	width: 280px;
+	margin-left: 20px;
+	padding-left: 18px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+#Cadre-Confirm_Mdp{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: left;
+	background-color: white;
+	height: 40px;
+	width: 369px;
+	margin-left: 20px;
+	border-radius: 20px;
+	border: 3px black solid;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#Cadre{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	height: 150px;
+	width: 260px;
+	margin-left: 20px;
+	padding-left: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	border: 3px black solid;
+}
+.pays{
+	margin-top: 5px;
+	padding-left: 40px;
+}
+
+.ville{
+	margin-top: 10px;
+	padding-left: 41px;
+}
+.rue{
+	margin-top: 10px;
+	padding-left: 44px;
+}
+.telephone{
+	margin-top: 10px;
+}
+.bouton_inscription{
+	align-self: center;
+	width: 120px;
+	height: 40px;
+	margin-right: 10px;
+	margin-left: 35%;
+	border-radius: 16px;
+	border: 3px black solid;
+	background-color: ;
+}
+h{
+	font-family: Calibri;
+}

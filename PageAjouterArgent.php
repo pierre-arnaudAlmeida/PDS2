@@ -1,5 +1,5 @@
 <?php
-	session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -12,15 +12,15 @@
 	<link rel="stylesheet" href="nav.css" />
 	<link rel="stylesheet" href="objet.css" />
 	<link rel="stylesheet" href="compte.css" />
-	<link rel="stylesheet" href="footer.css" />   
+	<link rel="stylesheet" href="footer.css" />    
 
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
 <body>
 	<?php include("Header.php"); ?>
 
-		<div id="pagecentrale">
-			<?php include("Liste_Objets.php"); ?>
+		<div id="pageconnexion">
+			
 		</div>
 </body>
 	<?php include("Footer.php"); ?>

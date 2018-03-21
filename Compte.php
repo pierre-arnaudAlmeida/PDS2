@@ -24,17 +24,18 @@
               while ($donnees = $reponse->fetch())
               {
               ?>
-        			<h4>Bonjour Mr <?php $pseudo=$_SESSION['nom'];echo $pseudo;  ?></h4>
-              <h4>Argent disponible : <?php echo $donnees['argent']; ?> €</h4>
+        			<h6>Bonjour Mr <?php $pseudo=$_SESSION['nom'];echo $pseudo;  ?></h6>
+              <h6>Argent disponible : <?php echo $donnees['argent']; ?> €</h6>
               <?php
               }
               $reponse->closeCursor(); // Termine le traitement de la requête
               ?>
-            </div>
-                    <a href="deconnection.php" >
-                   <h6> Se Deconnecter</h6></image>
-                    
+
+              <a href="PageAjouterArgent.php" >
+                   <h6> Ajouter de l'Argent</h6></image>  
                   </a>
+            </div>
+
     	    </div>
         		<div id="Cadre-modifier">
         	<form action="traitement_modifier.php" method="post" name="modifer">

@@ -1,0 +1,131 @@
+/* ------------------------------------Header page PHP-----------------------
+--------------------------------------------------------------------------- */
+#entete{
+	display: flex;
+	justify-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	height: 140px;
+	background-color: #BDBDBD;
+}
+.header {
+  	background-color: #f1f1f1;
+	padding: 30px;
+  	text-align: center;
+}
+#navbar {
+  	overflow: hidden;
+  	display: flex;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	height: 50px;
+	background-color: #333;
+	justify-content: space-between;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	border-right: 3px solid black;
+}
+#navbar a {
+	float: left;
+  	display: block;
+  	color: #f2f2f2;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 20px;
+}
+#navbar a:hover {
+  	background-color: #333;
+  	color: black;
+}
+#navbar a.active {
+ 	 background-color: #4CAF50;
+  	color: white;
+}
+.content {
+ 	 padding: 16px;
+}
+.sticky {
+ 	 position: fixed;
+  	top: 0;
+  	width: 100%;
+}
+.sticky + .content {
+ 	 padding-top: 60px;
+}
+.onglet-accueil{
+	height: 100%;
+	width: 40%;
+	border-left: 3px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #4CAF50;
+	font-weight: bold;
+	align-items: center;
+	display: flex;
+}
+.onglet{
+	height: 100%;
+	width: 20%;
+	border-left: 3px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #333;
+	align-items: center;
+	display: flex;
+	font-weight: bold;
+}
+h1{
+	font-size: 20px;
+	font-family: Calibri;
+	color: white;	
+}
+h2{
+	font-size: 20px;
+	font-family: Calibri;
+	color: white;
+}
+a {
+	font-size: 20px;
+	font-family: Calibri;
+    text-decoration: none;
+    color: black;
+    display:inline-block;
+}
+.onglet-boutton {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    padding-top: 13px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 5px;
+}
+.onglet-objet {
+    position: relative;
+    display: inline-block;
+	border-left: 3px solid black;
+	width: 20%;
+}
+.onglet-objet-content {
+    display: none;
+    position: fixed;
+    background-color: #333;
+    z-index: 1;
+}
+.onglet-objet-content a {
+    color: white;
+    padding: 1px 8px;
+    text-decoration: none;
+    display: block;
+}
+.onglet-objet-content a:hover {background-color: #333}
+.onglet-objet:hover .onglet-objet-content {
+    display: block;
+}
+.onglet-objet:hover .onglet-boutton {
+    background-color: #333;
+}
