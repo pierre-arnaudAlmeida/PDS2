@@ -21,34 +21,28 @@
 	<?php include("/include/Header.php"); ?>
 
 		<div id="pagecentrale">
-			<div id="Liste_objets">
+			<div id="Obj">
 			<?php
 				try
 				{
-				// On se connecte à MySQL
 				$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');
 				}
 				catch(Exception $e)
 				{
-				// En cas d'erreur, on affiche un message et on arrête tout
         		die('Erreur : '.$e->getMessage());
 				}
-
-				// Si tout va bien, on peut continuer
 				$type_objet='lumiere';
-				// On récupère tout le contenu de la table jeux_video
+
 				$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
 				$reponse->execute(array(
     			'id' => $_SESSION['id'],
     			'type_objet' =>$type_objet
    				));
-
-				// On affiche chaque entrée une à une
 				while ($donnees = $reponse->fetch())
 				{
 			?>
         	<div id="Lumiere">
-				<div class="salon_lumiere">
+				<div class="lumiere">
 					<form action="traitement/traitement_update_objet.php" method="post">
     					<h3><strong>Lumière  <?php echo $donnees['lieux']; ?></strong></h3>
     					<h> Indiquer quel est l'état que vous souhaitiez :<br />
@@ -70,7 +64,11 @@
       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
       					<button type="submit">Supprimer l'objet</button>
       				</form>	
-      				</div>
+      			</div>
+
+      			<div class="illustration">
+      				
+      			</div>
 			</div>
 		<?php
 		}
