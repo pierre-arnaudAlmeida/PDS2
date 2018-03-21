@@ -71,7 +71,7 @@ session_start();
     $_SESSION['id'] = $resultat['id'];
     $_SESSION['nom'] = $nom_inscription;
 
-header('Location: \PDS2\PagePrincipale.php');
+header('Location: \PDS2\Accueil.php');
 } else header('Location: \PDS2\PageInscription.php');
 
 

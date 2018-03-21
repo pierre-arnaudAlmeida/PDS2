@@ -1,0 +1,19 @@
+/* ------------------------------------Partie Argent page PHP-----------------------
+----------------------------------------------------------------------------------- */
+#Argent-compte{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: Verdana;
+	margin-left: 2%;
+	padding-left: 50px;
+	width: 60%;
+	background-image: url(http://imindstream.files.wordpress.com/2013/06/people-puzzle-pieces.png);
+	background-size: cover;
+	margin-bottom: 25%;
+	margin-top: 10%;
+}
+.Argent{
+	width: 52%;
+}

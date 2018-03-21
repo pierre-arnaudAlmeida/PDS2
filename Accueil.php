@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="style/objet.css" />
 	<link rel="stylesheet" href="style/compte.css" />
 	<link rel="stylesheet" href="style/footer.css" />
+	<link rel="stylesheet" href="style/argent.css" />
 
 	<script type="text/javascript" src="script/script.js"></script>  
 
@@ -28,10 +29,8 @@
 		<div id="pageaccueil">
 			<div id="Nav2">
 				<h5>Bienvenue sur DEVICE MANAGER</h5>
-					<h1>
-					Vous avez envie de géré vos objets connnectés directement en ligne ?<br><br>
-					Et bien vous êtes sur le premier site en France permettant de le faire en toute simplicité. Grace à notre site vous pourrez gérer différents types d'objets tels que votre télévision, vos volets ou bien pourquoi pas controlé l'integralité de votre éclairage totalement en ligne grace à nous.
-				</h1>
+					<h1>Vous avez envie de géré vos objets connnectés directement en ligne ?<br><br>
+					Et bien vous êtes sur le premier site en France permettant de le faire en toute simplicité. Grace à notre site vous pourrez gérer différents types d'objets tels que votre télévision, vos volets ou bien pourquoi pas controlé l'integralité de votre éclairage totalement en ligne grace à nous.</h1>
 			</div>
 			<script language="javascript">StartAnim();</script>
 		</div>

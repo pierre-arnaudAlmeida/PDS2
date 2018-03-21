@@ -71,5 +71,5 @@ try
 		'id' => $id
 	));
 	};
-	header('Location: \PDS2\PagePrincipale.php');
+	header('Location: \PDS2\Accueil.php');
 ?>
