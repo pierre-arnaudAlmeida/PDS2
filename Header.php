@@ -11,22 +11,18 @@
   <a class="active" href="Accueil.php"><h1>Accueil</h1></a>
   </div>
 
-  <div class ="onglet">
-  <a href="PageObjets.php"><h1>Objets</h1></a>
-  		<ul>
-    		<li>
+  <div class="onglet-objet">
+      			<button class="onglet-boutton"><a href="PageObjets.php">Objets</a></button>
+      			<div class="onglet-objet-content">
       			<?php
 				if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 					echo '
-						<ul>
         					<a href="PageLumiere.php"><h2>Lumières</h2></a></br>
         					<a href="PageVolet.php"><h2>Volets</h2></a></br>
         					<a href="PageTelevision.php"><h2>Télévisions</h2></a></br>
-       						<a href="PageAjout_Objet.php"><h2>Ajouter un Objet</h2></a></br>
-						</ul>';}
+       						<a href="PageAjout_Objet.php"><h2>Ajouter un Objet</h2></a></br>';}
       			?>
-    		</li>
-  		</ul>
+      			</div>
   </div>
 
 <?php
