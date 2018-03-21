@@ -1,5 +1,5 @@
 <div id="Liste_objets">
-            <form action="traitement_ajout_objet.php" method="post">
+            <form action="traitement/traitement_ajout_objet.php" method="post">
               <div id="Cadre-telephone">
                 <div class="telephone">
                   <?php

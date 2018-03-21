@@ -21,13 +21,13 @@ $resultat = $req->fetch();
 
 if (!$resultat)
 {   
-   header('Location: PageConnexion.php');
+   header('Location: \PDS2\PageConnexion.php');
 }
 else
 {
     session_start();
     $_SESSION['id'] = $resultat['id'];
     $_SESSION['nom'] = $nom_connection;
-    header('Location: PageObjets.php');
+    header('Location: \PDS2\PageObjets.php');
 }
 ?>

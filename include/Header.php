@@ -32,7 +32,7 @@
 			<a href="PageCompte.php" ><h1>Mon Compte</h1></a>
 		</div>
 		<div class="onglet">
-			<a href="deconnection.php" ><h1>Se Deconnecter</h1></a>
+			<a href="traitement/deconnection.php" ><h1>Se Deconnecter</h1></a>
 		</div>';}
 		?>
 		<?php

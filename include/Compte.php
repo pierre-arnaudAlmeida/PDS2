@@ -38,7 +38,7 @@
 
     	    </div>
         		<div id="Cadre-modifier">
-        	<form action="traitement_modifier.php" method="post" name="modifer">
+        	<form action="traitement/traitement_modifier.php" method="post" name="modifer">
 
         		<div id="Cadre-date_naissance">
                 	<div class="date_naissance">                    

@@ -56,7 +56,7 @@
 		'lieux'=>$lieux,
 		'chaine'=>$chaine
 		));
-		header('Location: PageObjets.php');
+		header('Location: \PDS2\PageObjets.php');
 
 		$montant = ($argent-$prix);
 

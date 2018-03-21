@@ -31,7 +31,7 @@
 		$telephone_inscription = $_POST['telephone'];
 	}else $telephone_inscription ='';
 
-	}else header('Location: PageInscription.php');
+	}else header('Location: \PDS2\PageInscription.php');
 
 	
 	$nb_occurence =0;
@@ -71,8 +71,8 @@ session_start();
     $_SESSION['id'] = $resultat['id'];
     $_SESSION['nom'] = $nom_inscription;
 
-header('Location: PagePrincipale.php');
-} else header('Location: PageInscription.php');
+header('Location: \PDS2\PagePrincipale.php');
+} else header('Location: \PDS2\PageInscription.php');
 
 
 

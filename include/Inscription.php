@@ -1,6 +1,6 @@
 <div id="Inscription">
       <div id="colonne">
-		      <form action="traitement_inscription.php" method="post" name="inscrire"> 	       
+		      <form action="traitement/traitement_inscription.php" method="post" name="inscrire"> 	       
              <div id="Cadre-Nom">
                 <div class="nom">                    
                       <h>Nom <input type="text" name="nom_inscription" required/>

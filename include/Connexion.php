@@ -1,5 +1,5 @@
 <div id="Connexion">
-            <form action="traitement_connection.php" method="post" name="connecter"> <!-- changer la direction du mot de passe et du nom -->
+            <form action="traitement/traitement_connection.php" method="post" name="connecter"> <!-- changer la direction du mot de passe et du nom -->
             
             <div id="Cadre-nom">
                 <div class="nom">                    

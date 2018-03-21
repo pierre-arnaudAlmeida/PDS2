@@ -5,22 +5,22 @@ session_start()
 <html lang="fr-FR">
 <head>
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="https://lh5.googleusercontent.com/-cCPFUP6eAj0/USdq5uSTKFI/AAAAAAAAAYY/3CeiAHyAiFU/s800/triboulon_white.png" type="images/png"/><link rel="stylesheet" href="main.css" />
-	<link rel="stylesheet" href="header.css" />
-	<link rel="stylesheet" href="inscription.css" />
-	<link rel="stylesheet" href="connexion.css" />
-	<link rel="stylesheet" href="nav.css" />
-	<link rel="stylesheet" href="objet.css" />
-	<link rel="stylesheet" href="compte.css" />
-	<link rel="stylesheet" href="footer.css" />    
+	<link rel="shortcut icon" href="https://lh5.googleusercontent.com/-cCPFUP6eAj0/USdq5uSTKFI/AAAAAAAAAYY/3CeiAHyAiFU/s800/triboulon_white.png" type="images/png"/><link rel="stylesheet" href="style/main.css" />
+	<link rel="stylesheet" href="style/header.css" />
+	<link rel="stylesheet" href="style/inscription.css" />
+	<link rel="stylesheet" href="style/connexion.css" />
+	<link rel="stylesheet" href="style/nav.css" />
+	<link rel="stylesheet" href="style/objet.css" />
+	<link rel="stylesheet" href="style/compte.css" />
+	<link rel="stylesheet" href="style/footer.css" />    
 
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
 <body>
-	<?php include("Header.php"); ?>
+	<?php include("/include/Header.php"); ?>
 
 		<div id="pageconnexion">
-			<?php include("Connexion.php"); ?>
+			<?php include("/include/Connexion.php"); ?>
 			<div id="Nav">
 				<h1>Vous avez déja un compte alors il ne vous reste plus qu'à vous connecté.</br></br>
 					Vous n'avez qu'à renseigné votre nom ainsi que votre mot de passe.</br></h1>
@@ -29,5 +29,5 @@ session_start()
 		</div>
 		</div>
 </body>
-	<?php include("Footer.php"); ?>
+	<?php include("/include/Footer.php"); ?>
 </html>

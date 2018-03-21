@@ -16,6 +16,6 @@ try
 		$req->execute(array(
 		'id_objet' => $id_objet
 	));
-	header('Location: PageObjets.php');
+	header('Location: \PDS2\PageObjets.php');
 ?>
 	

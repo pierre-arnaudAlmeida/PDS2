@@ -33,7 +33,7 @@ try
 			'lieux'=>$donnees['lieux'],
 			'chaine'=>$donnees['chaine']
 			));
-	header('Location: PageTelevision.php');
+	header('Location: \PDS2\PageTelevision.php');
 	}
 
 	
@@ -61,7 +61,7 @@ try
 			'lieux'=>$donnees['lieux'],
 			'chaine'=>$donnees['chaine']
 			));
-	header('Location: PageTelevision.php');
+	header('Location: \PDS2\PageTelevision.php');
 	}
 
 	if(isset($_POST['etat_volet'])){
@@ -88,7 +88,7 @@ try
 			'lieux'=>$donnees['lieux'],
 			'chaine'=>$donnees['chaine']
 			));
-	header('Location: PageVolet.php');
+	header('Location: \PDS2\PageVolet.php');
 	}
 
 	if(isset($_POST['etat_lumiere'])){
@@ -115,7 +115,7 @@ try
 			'lieux'=>$donnees['lieux'],
 			'chaine'=>$donnees['chaine']
 			));
-	header('Location: PageLumiere.php');
+	header('Location: \PDS2\PageLumiere.php');
 	}
 
 ?>
