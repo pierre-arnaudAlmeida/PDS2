@@ -10,7 +10,21 @@ body{
 	height: 1000px;
 	background-color: #333;
 }
-
+#pageaccueil{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 1000px;
+	background-color: #333;
+	flex-wrap: wrap;
+}
+h5{
+	font-family: Brush Script MT;
+	font-size: 40px;
+	color: white;
+	padding-left: 140px;
+}
 /* ------------------------------------Header page PHP-----------------------
 --------------------------------------------------------------------------- */
 #entete{
@@ -594,11 +608,16 @@ footer{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	width: 40%;
+	justify-content: center;
+	width: 20%;
 	height: 160px;
-	padding: 20px;
+	padding-left: 10%;
 	margin-left: 10px;
 	border-left: 3px #BDBDBD solid;
+}
+#reseaux{
+	width: 40%;
+	display: flex;
 }
 
 a2{
