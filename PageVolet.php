@@ -53,14 +53,13 @@
 						<h3><strong> Volet <?php echo $donnees['lieux']; ?></strong> </h3>
 						<h> Indiquer quel est l'état que vous souhaitiez :<br />
 
-       					<input type="radio" name="etat_volet" value="volet_monte" id="volet_monte" /> 
+						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+       					<input type="radio" name="etat_volet" value="volet_monte" id="volet_monte" onchange="this.form.submit()"/> 
        					<label for="volet_monte">Monter le volet</label><br />
 
-       					<input type="radio" name="etat_volet" value="volet_descendu" id="volet_descendu" /> 
+       					<input type="radio" name="etat_volet" value="volet_descendu" id="volet_descendu" onchange="this.form.submit()"/> 
        					<label for="volet_descendu">Descendre le volet</label><br />
        					
-       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-       					<button type="submit">OK</button>
       					</h><br/><br/>
       					<h> Les volets sont actuellement <strong><?php if($donnees['etat']==1){
       						echo 'monté';}else echo 'descendus'; ?></strong> dans : </h><?php echo $donnees['lieux']; ?><br/><br/>

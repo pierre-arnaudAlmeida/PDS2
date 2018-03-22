@@ -85,15 +85,33 @@ h3{
 
 #Lumiere{
 	display: flex;
-	padding-bottom: 60px;
+	margin-bottom: 60px;
+	padding-top: 25px;
 }
+
 .lumiere{
 	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-.illustration{
+
+.illustration-lumiere{
 	display: flex;
 	margin-left: 15px;
 	width: 40%;
 	background-image: url(http://www.hellopro.fr/images/produit-2/0/3/0/volet-aluminium-taos-volet-coulissant-taos-5821030.jpg);
 	background-size: 100% 100%;
+	margin-right: 15px;
+}
+
+.lieux-objet{
+	border: 3px black solid;
+	background-color: black;
+	color: white;
+	font-size: 40px;
+	font-family: Brush Script MT;
+	text-align: center;
+	border-radius: 20px;
 }

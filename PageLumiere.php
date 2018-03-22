@@ -44,18 +44,18 @@
         	<div id="Lumiere">
 				<div class="lumiere">
 					<form action="traitement/traitement_update_objet.php" method="post">
-    					<h3><strong>Lumière  <?php echo $donnees['lieux']; ?></strong></h3>
+    					<div class="lieux-objet">
+    						<strong>Lumière  <?php echo $donnees['lieux']; ?></strong>
+    					</div>
     					<h> Indiquer quel est l'état que vous souhaitiez :<br />
-
-       					<input type="radio" name="etat_lumiere" value="lumiere_allumee" id="lumiere_allumee" /> 
+    					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+       					<input type="radio" name="etat_lumiere" value="lumiere_allumee" id="lumiere_allumee" onchange="this.form.submit()" /> 
        					<label for="lumiere_allumee">Allumer la lumière</label><br />
 
-       					<input type="radio" name="etat_lumiere" value="lumiere_eteinte" id="lumiere_eteinte" /> 
+       					<input type="radio" name="etat_lumiere" value="lumiere_eteinte" id="lumiere_eteinte" onchange="this.form.submit()"/> 
        					<label for="lumiere_eteinte">Eteindre la lumière</label><br />
 
-       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-       					<button type="submit">OK</button>
-      					</h><br/><br/>
+       					</h><br/><br/>
       					<h> La lumière est actuellement <strong><?php if($donnees['etat']==1){
       						echo 'allumé';}else echo 'éteinte'; ?></strong> dans : </h><?php echo $donnees['lieux']; ?> <br/><br/>
       				</form>
@@ -66,7 +66,7 @@
       				</form>	
       			</div>
 
-      			<div class="illustration">
+      			<div class="illustration-lumiere">
       				
       			</div>
 			</div>
