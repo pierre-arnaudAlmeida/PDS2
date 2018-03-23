@@ -20,7 +20,6 @@
 </head>
 <body>
 	<?php include("/include/Header.php"); ?>
-
 		<div id="pagecentrale">
 			<?php include("/include/Liste_Objets.php"); ?>
 		</div>

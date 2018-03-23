@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr-FR">
 <?php
 try
 	{
@@ -119,6 +117,4 @@ try
 			));
 	header('Location: \PDS2\PageLumiere.php');
 	}
-
 ?>
-</html>

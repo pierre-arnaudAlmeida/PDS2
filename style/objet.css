@@ -30,7 +30,6 @@ h3{
 .disconnect{
 	align-self: center
 }
-
 #Volet{
 	display : flex;
 	flex-wrap: wrap;
@@ -73,7 +72,6 @@ h3{
 	border-radius: 20px;
 	border: 3px grey inset;
 }
-
 #Obj{
 	display: flex;
 	flex-direction: column;
@@ -82,13 +80,11 @@ h3{
 	height: 70%;
 	padding: 10%;
 }
-
 #Lumiere{
 	display: flex;
 	margin-bottom: 60px;
 	padding-top: 25px;
 }
-
 .lumiere{
 	width: 60%;
 	display: flex;
@@ -96,7 +92,6 @@ h3{
 	align-items: center;
 	justify-content: center;
 }
-
 .illustration-lumiere{
 	display: flex;
 	margin-left: 15px;
@@ -105,7 +100,6 @@ h3{
 	background-size: 100% 100%;
 	margin-right: 15px;
 }
-
 .lieux-objet{
 	border: 3px black solid;
 	background-color: black;

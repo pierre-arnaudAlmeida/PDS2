@@ -20,35 +20,25 @@
 </head>
 <body>
 	<?php include("/include/Header.php"); ?>
-
-		<div id="pagecentrale">
-			<div id="Liste_objets">
-        	<?php
-				try
-				{
-
-				$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');
-				}
-				catch(Exception $e)
-				{
-
-        		die('Erreur : '.$e->getMessage());
-				}
-
-				$type_objet='television';
-				if (isset($_POST['id_objet'])) {
-					$id_objet=$_POST['id_objet'];
-				}else ($id_objet=$_SESSION['id_objet']);
-
-				$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
-				$reponse->execute(array(
-    			'id' => $_SESSION['id'],
-    			'type_objet' =>$type_objet,
-    			'id_objet' =>$id_objet
-   				));
-
-				$donnees = $reponse->fetch()
-			?>
+	<div id="pagecentrale">
+		<div id="Liste_objets">
+        <?php
+			try
+			{$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');}
+			catch(Exception $e)
+			{die('Erreur : '.$e->getMessage());}
+			$type_objet='television';
+			if (isset($_POST['id_objet'])) {
+				$id_objet=$_POST['id_objet'];
+			}else ($id_objet=$_SESSION['id_objet']);
+			$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
+			$reponse->execute(array(
+    		'id' => $_SESSION['id'],
+   			'type_objet' =>$type_objet,
+   			'id_objet' =>$id_objet
+ 			));
+			$donnees = $reponse->fetch()
+		?>
         	<div id="Television">
 				<div class="television">
 					<form action="traitement/traitement_update_objet.php" method="post">
@@ -59,7 +49,6 @@
 						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
 						<input class="bouton_chaine" type="form" name="chaine_television" value="Entrer la chaîne choisi" id = "bouton_chaine" onchange="this.form.submit()"/><br/><br/>
 						
-
        					<form action="traitement/traitement_update_objet.php" method="post">
        					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
        					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
@@ -71,7 +60,7 @@
        					
       					</h><br/><br/>
       					<h> La télévision est actuellement <strong><?php if($donnees['etat']==1){
-      						echo 'allumé';}else echo 'éteinte'; ?></strong></h><br/><br/>
+      					echo 'allumé';}else echo 'éteinte'; ?></strong></h><br/><br/>
 					</form>
 					<form action="traitement/traitement_delete_objet.php" method="post">
 						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
@@ -79,12 +68,12 @@
       					<button type="submit">Supprimer l'objet</button>
       				</form>	
 				</div>
-			</div>
+			</div>	
 			<?php
 			$reponse->closeCursor();
 			?>
     	</div>
-		</div>
+	</div>
 </body>
 	<?php include("/include/Footer.php"); ?>
 </html>

@@ -20,13 +20,12 @@ session_start();
 </head>
 <body>
 	<?php include("/include/Header.php"); ?>
-
 		<div id="pagecompte">
 			<?php include("/include/Compte.php"); ?>
 			<div id="Nav2">
-			<h1>Pour modifier certains champs inserer vos nouvelles informations dasn les champs choisis.</br></br>
-			Apres avoir entré vos nouvelles informations la seule chose qu'il ne vous a faire c'est saisir votre mot de passe puis de lacher un petit clic sur le bouton Modifier qui se trouve sous le beau formulaire que nous avons fait.</br></br>
-			Bien entendu les champs que vous ne souhaitez pas changer ou que vous ne souhaitez pas renseigner nous vous invitons a les laisser vide.</h1>
+				<h1>Pour modifier certains champs inserer vos nouvelles informations dasn les champs choisis.</br></br>
+				Apres avoir entré vos nouvelles informations la seule chose qu'il ne vous a faire c'est saisir votre mot de passe puis de lacher un petit clic sur le bouton Modifier qui se trouve sous le beau formulaire que nous avons fait.</br></br>
+				Bien entendu les champs que vous ne souhaitez pas changer ou que vous ne souhaitez pas renseigner nous vous invitons a les laisser vide.</h1>
 			</div>
 		</div>
 </body>

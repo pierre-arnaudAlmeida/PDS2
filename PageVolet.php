@@ -20,35 +20,25 @@
 </head>
 <body>
 	<?php include("/include/Header.php"); ?>
-
-		<div id="pagecentrale">
-			<div id="Liste_objets">
-        	<?php
-				try
-				{
-
-				$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');
-				}
-				catch(Exception $e)
-				{
-
-        		die('Erreur : '.$e->getMessage());
-				}
-	
-				$type_objet='volet';
-				if (isset($_POST['id_objet'])) {
-					$id_objet=$_POST['id_objet'];
-				}else ($id_objet=$_SESSION['id_objet']);
-				
-				$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
-				$reponse->execute(array(
-    			'id' => $_SESSION['id'],
-    			'type_objet' =>$type_objet,
-    			'id_objet' =>$id_objet
-   				));
-
-				$donnees = $reponse->fetch()
-			?>
+	<div id="pagecentrale">
+		<div id="Liste_objets">
+        <?php
+			try{
+			$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');}
+			catch(Exception $e)
+			{die('Erreur : '.$e->getMessage());}	
+			$type_objet='volet';
+			if (isset($_POST['id_objet'])) {
+				$id_objet=$_POST['id_objet'];
+			}else ($id_objet=$_SESSION['id_objet']);
+			$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
+			$reponse->execute(array(
+    		'id' => $_SESSION['id'],
+    		'type_objet' =>$type_objet,
+    		'id_objet' =>$id_objet
+   			));
+			$donnees = $reponse->fetch()
+		?>
 			<div id="Volet">
 				<div class="salon_volet">
 					<form action="traitement/traitement_update_objet.php" method="post">
@@ -78,7 +68,7 @@
 			$reponse->closeCursor(); // Termine le traitement de la requête
 			?>	
         </div>
-		</div>
+	</div>
 </body>
 	<?php include("/include/Footer.php"); ?>
 </html>

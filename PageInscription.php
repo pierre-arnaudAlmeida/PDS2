@@ -20,7 +20,6 @@
 </head>
 <body>
 	<?php include("/include/Header.php"); ?>
-
 	<div id="pageinscription">
 		<?php include("/include/Inscription.php"); ?>
 		<div id="Nav2">

@@ -20,15 +20,14 @@ session_start()
 </head>
 <body>
 	<?php include("/include/Header.php"); ?>
-
 		<div id="pageconnexion">
 			<?php include("/include/Connexion.php"); ?>
 			<div id="Nav">
 				<h1>Vous avez déja un compte alors il ne vous reste plus qu'à vous connecté.</br></br>
-					Vous n'avez qu'à renseigné votre nom ainsi que votre mot de passe.</br></h1>
+				Vous n'avez qu'à renseigné votre nom ainsi que votre mot de passe.</br></h1>
 				<h1> Dans le cas ou vous n'avez pas encore de compte sur ce site, nous vous invitons à vous inscrire via le lien suivant en <a href="PageInscription.php">Cliquant ici</a></h1>
 				<h1> Dans le cas ou vous avez oublier votre mot de passe nous vous invitons à <a href="PageMdp_perdu.php"> Cliquer ici</a></h1>
-		</div>
+			</div>
 		</div>
 </body>
 	<?php include("/include/Footer.php"); ?>
