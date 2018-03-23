@@ -13,7 +13,8 @@
 	<link rel="stylesheet" href="style/objet.css" />
 	<link rel="stylesheet" href="style/compte.css" />
 	<link rel="stylesheet" href="style/footer.css" />
-	<link rel="stylesheet" href="style/argent.css" />   
+	<link rel="stylesheet" href="style/argent.css" />
+	<link rel="stylesheet" href="style/liste.css" />   
 
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
@@ -32,14 +33,15 @@
         		die('Erreur : '.$e->getMessage());
 				}
 				$type_objet='lumiere';
+				$id_objet=$_POST['id_objet'];
 
-				$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
+				$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
 				$reponse->execute(array(
     			'id' => $_SESSION['id'],
-    			'type_objet' =>$type_objet
+    			'type_objet' =>$type_objet,
+    			'id_objet' =>$id_objet
    				));
-				while ($donnees = $reponse->fetch())
-				{
+				$donnees = $reponse->fetch();
 			?>
         	<div id="Lumiere">
 				<div class="lumiere">
@@ -71,7 +73,6 @@
       			</div>
 			</div>
 		<?php
-		}
 		$reponse->closeCursor(); // Termine le traitement de la requête
 		?>			
 							

@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="style/compte.css" />
 	<link rel="stylesheet" href="style/footer.css" />
 	<link rel="stylesheet" href="style/argent.css" />
+	<link rel="stylesheet" href="style/liste.css" />
 
 	<script type="text/javascript" src="script/script.js"></script>  
 

@@ -18,7 +18,8 @@ try
 		<div class="logo-objet">
 		<?php
 		if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
-		echo '<a href="PageLumiere.php" class="Lumiere-logo"><image src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" width="170" height="170"></image></a>
+		echo '<a href="PageListe_Lumiere.php" class="Lumiere-logo">
+				<image src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" width="170" height="170"></image></a>
 		';}else {
 			echo '<image src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" width="170" height="170"></image>
 			';}
@@ -44,7 +45,7 @@ try
 		<div class="logo-objet">
 			<?php
 		if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
-		echo '<a href="PageVolet.php" class="Volet-logo"><image src="http://www.valferm.fr/wp-content/themes/valferm/images/produit/volet-bois/01-volets-bois-a-cles.png" width="170" height="170"></image></a>
+		echo '<a href="PageListe_Volet.php" class="Volet-logo" name="type_objet" value="volet"><image src="http://www.valferm.fr/wp-content/themes/valferm/images/produit/volet-bois/01-volets-bois-a-cles.png" width="170" height="170"></image></a>
 		';}else {
 			echo '<image src="http://www.valferm.fr/wp-content/themes/valferm/images/produit/volet-bois/01-volets-bois-a-cles.png" width="170" height="170"></image>
 			';}
@@ -70,7 +71,7 @@ try
 		<div class="logo-objet">
 			<?php
 		if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
-		echo '<a href="PageTelevision.php" class="Television-logo"><image src="https://vignette.wikia.nocookie.net/fictspedia/images/4/42/ITV.001_samsung_d8000_side1.png/revision/latest?cb=20140908234619" width="170" height="170"></image>
+		echo '<a href="PageListe_Television.php" class="Television-logo" name="type_objet" value="television"><image src="https://vignette.wikia.nocookie.net/fictspedia/images/4/42/ITV.001_samsung_d8000_side1.png/revision/latest?cb=20140908234619" width="170" height="170"></image>
 			';}else {
 			echo '<image src="https://vignette.wikia.nocookie.net/fictspedia/images/4/42/ITV.001_samsung_d8000_side1.png/revision/latest?cb=20140908234619" width="170" height="170"></image>
 			';}

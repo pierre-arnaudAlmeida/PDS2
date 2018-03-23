@@ -13,7 +13,8 @@
 	<link rel="stylesheet" href="style/objet.css" />
 	<link rel="stylesheet" href="style/compte.css" />
 	<link rel="stylesheet" href="style/footer.css" />
-	<link rel="stylesheet" href="style/argent.css" />    
+	<link rel="stylesheet" href="style/argent.css" />
+	<link rel="stylesheet" href="style/liste.css" />    
 
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
@@ -25,27 +26,26 @@
         	<?php
 				try
 				{
-				// On se connecte à MySQL
+
 				$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');
 				}
 				catch(Exception $e)
 				{
-				// En cas d'erreur, on affiche un message et on arrête tout
+
         		die('Erreur : '.$e->getMessage());
 				}
 	
-				// Si tout va bien, on peut continuer
 				$type_objet='volet';
-				// On récupère tout le contenu de la table jeux_video
-				$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
+				$id_objet=$_POST['id_objet'];
+				
+				$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
 				$reponse->execute(array(
     			'id' => $_SESSION['id'],
-    			'type_objet' =>$type_objet
+    			'type_objet' =>$type_objet,
+    			'id_objet' =>$id_objet
    				));
 
-				// On affiche chaque entrée une à une
-				while ($donnees = $reponse->fetch())
-				{
+				$donnees = $reponse->fetch()
 			?>
 			<div id="Volet">
 				<div class="salon_volet">
@@ -71,7 +71,6 @@
 				</div>
 			</div>
 			<?php
-			}
 			$reponse->closeCursor(); // Termine le traitement de la requête
 			?>	
         </div>

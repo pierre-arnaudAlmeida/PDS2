@@ -17,9 +17,9 @@
       			<?php
 				if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 					echo '
-        					<a href="PageLumiere.php"><h2>Lumières</h2></a></br>
-        					<a href="PageVolet.php"><h2>Volets</h2></a></br>
-        					<a href="PageTelevision.php"><h2>Télévisions</h2></a></br>
+        					<a href="PageListe_Lumiere.php"><h2>Lumières</h2></a></br>
+        					<a href="PageListe_Volet.php"><h2>Volets</h2></a></br>
+        					<a href="PageListe_Television.php"><h2>Télévisions</h2></a></br>
        						<a href="PageAjout_Objet.php"><h2>Ajouter un Objet</h2></a></br>';}
       			?>
       			</div>
