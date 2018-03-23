@@ -36,7 +36,9 @@
 				}
 	
 				$type_objet='volet';
-				$id_objet=$_POST['id_objet'];
+				if (isset($_POST['id_objet'])) {
+					$id_objet=$_POST['id_objet'];
+				}else ($id_objet=$_SESSION['id_objet']);
 				
 				$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
 				$reponse->execute(array(
@@ -54,6 +56,7 @@
 						<h> Indiquer quel est l'état que vous souhaitiez :<br />
 
 						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
        					<input type="radio" name="etat_volet" value="volet_monte" id="volet_monte" onchange="this.form.submit()"/> 
        					<label for="volet_monte">Monter le volet</label><br />
 
@@ -66,6 +69,7 @@
 					</form>
 					<form action="traitement/traitement_delete_objet.php" method="post">
 						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
       					<button type="submit">Supprimer l'objet</button>
       				</form>	
 				</div>

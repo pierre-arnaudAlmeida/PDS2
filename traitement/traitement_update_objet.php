@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
 <?php
 try
 	{
@@ -119,3 +121,4 @@ try
 	}
 
 ?>
+</html>

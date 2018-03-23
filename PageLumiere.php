@@ -33,8 +33,10 @@
         		die('Erreur : '.$e->getMessage());
 				}
 				$type_objet='lumiere';
-				$id_objet=$_POST['id_objet'];
-
+				if (isset($_POST['id_objet'])) {
+					$id_objet=$_POST['id_objet'];
+				}else ($id_objet=$_SESSION['id_objet']);
+				
 				$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
 				$reponse->execute(array(
     			'id' => $_SESSION['id'],
@@ -51,6 +53,7 @@
     					</div>
     					<h> Indiquer quel est l'état que vous souhaitiez :<br />
     					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+    					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
        					<input type="radio" name="etat_lumiere" value="lumiere_allumee" id="lumiere_allumee" onchange="this.form.submit()" /> 
        					<label for="lumiere_allumee">Allumer la lumière</label><br />
 
@@ -63,6 +66,7 @@
       				</form>
 
       				<form action="traitement_delete_objet.php" method="post">
+      					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
       					<button type="submit">Supprimer l'objet</button>
       				</form>	

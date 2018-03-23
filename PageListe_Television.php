@@ -55,6 +55,7 @@
 					<div class="bouton_selectionner">
 						<form action="PageTelevision.php" method="post">
       						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+      						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
       						<button class="selectionner" type="submit">Selectionner</button>
       					</form>
       				</div>

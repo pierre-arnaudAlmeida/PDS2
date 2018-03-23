@@ -36,7 +36,9 @@
 				}
 
 				$type_objet='television';
-				$id_objet=$_POST['id_objet'];
+				if (isset($_POST['id_objet'])) {
+					$id_objet=$_POST['id_objet'];
+				}else ($id_objet=$_SESSION['id_objet']);
 
 				$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
 				$reponse->execute(array(
@@ -54,11 +56,13 @@
 						<h> Indiquer quel est l'état que vous souhaitiez : <br/><br/></h>
 						<h> La Chaine actuelle est : <?php echo $donnees['chaine']; ?></h><br/>
 						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
 						<input class="bouton_chaine" type="form" name="chaine_television" value="Entrer la chaîne choisi" id = "bouton_chaine" onchange="this.form.submit()"/><br/><br/>
 						
 
        					<form action="traitement/traitement_update_objet.php" method="post">
        					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+       					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
        					<input type="radio" name="etat_television" value="television_allumee" id="television_allumee" onchange="this.form.submit()"/> 
        					<label for="television_allumee">Allumer la télévision</label><br />
 
@@ -70,6 +74,7 @@
       						echo 'allumé';}else echo 'éteinte'; ?></strong></h><br/><br/>
 					</form>
 					<form action="traitement/traitement_delete_objet.php" method="post">
+						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
 						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
       					<button type="submit">Supprimer l'objet</button>
       				</form>	
