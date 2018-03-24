@@ -11,6 +11,7 @@ try
 	}
 
 	$id_objet=$_POST['id_objet'];
+	$type_objet=$_POST['type_objet'];
 
 	if(isset($_POST['chaine_television'])){
 	$chaine=$_POST['chaine_television'];
@@ -90,10 +91,8 @@ try
 			));
 	header('Location: \PDS2\PageVolet.php');
 	}
-
+	if($type_objet=='lumiere'){
 	if(isset($_POST['etat_lumiere'])){
-		$etat_lumiere=$_POST['etat_lumiere'];
-		if($etat_lumiere=='lumiere_allumee'){
 			$etat_lumiere=1;
 		}else $etat_lumiere=0;
 		$req = $bdd->prepare('UPDATE objet SET etat = :etat WHERE id_objet = :id_objet');

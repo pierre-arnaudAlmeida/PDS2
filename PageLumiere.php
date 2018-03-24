@@ -46,23 +46,29 @@
     					<div class="lieux-objet">
     						<strong>Lumière  <?php echo $donnees['lieux']; ?></strong>
     					</div>
-    					<h> Indiquer quel est l'état que vous souhaitiez :<br />
+    					<h> Vous souhaitez modifier l'etat de votre éclairage, faite le grace au bouton ON/OFF :<br />
     					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
     					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-       					<input type="radio" name="etat_lumiere" value="lumiere_allumee" id="lumiere_allumee" onchange="this.form.submit()" /> 
-       					<label for="lumiere_allumee">Allumer la lumière</label><br />
-
-       					<input type="radio" name="etat_lumiere" value="lumiere_eteinte" id="lumiere_eteinte" onchange="this.form.submit()"/> 
-       					<label for="lumiere_eteinte">Eteindre la lumière</label><br />
-
-	       				</h><br/><br/>
-      					<h> La lumière est actuellement <strong><?php if($donnees['etat']==1){
-      						echo 'allumé';}else echo 'éteinte'; ?></strong> dans : </h><?php echo $donnees['lieux']; ?> <br/><br/>
+    					<input type="hidden" name="type_objet" value="lumiere">
+    					<?php if($donnees['etat']==1){
+    					echo '<div class="bouton_etat">				
+								<input type="checkbox" value="None" id="bouton_etat" name="etat_lumiere" checked onchange="this.form.submit()"/>
+								<label for="bouton_etat"></label>
+							</div>';
+						}else echo '<div class="bouton_etat">		
+								<input type="checkbox" value="None" id="bouton_etat" name="etat_lumiere" onchange="this.form.submit()"/>
+								<label for="bouton_etat"></label>
+							</div>';
+						?>
       				</form>
+      				<h> Vous souhaitez supprimer cet objet, il vous suffit de faire glisser l'icone ci-dessous :<br />
       				<form action="traitement/traitement_delete_objet.php" method="post">
       					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-      					<button type="submit">Supprimer l'objet</button>
+      					<div class="bouton_supp">	
+							<input type="checkbox" value="None" id="bouton_supp" name="check" onchange="this.form.submit()"/>
+							<label for="bouton_supp"></label>
+						</div>
       				</form>	
       			</div>
       			<div class="illustration-lumiere">
