@@ -21,7 +21,7 @@
 <body>
 	<?php include("/include/Header.php"); ?>
 	<div id="pagecentrale">
-		<div id="Liste_objets">
+		<div id="Obj">
         <?php
 			try{
 			$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');}
@@ -39,30 +39,45 @@
    			));
 			$donnees = $reponse->fetch()
 		?>
-			<div id="Volet">
-				<div class="salon_volet">
+			<div id="Lumiere">
+				<div class="lumiere">
 					<form action="traitement/traitement_update_objet.php" method="post">
-						<h3><strong> Volet <?php echo $donnees['lieux']; ?></strong> </h3>
-						<h> Indiquer quel est l'état que vous souhaitiez :<br />
-
+						<div class="lieux-objet">
+							<strong>Volet <?php echo $donnees['lieux']; ?></strong>
+						</div>
+						<br>
+						<h1> Vous souhaitez modifier l'etat de votre volet :</h1>
 						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-       					<input type="radio" name="etat_volet" value="volet_monte" id="volet_monte" onchange="this.form.submit()"/> 
-       					<label for="volet_monte">Monter le volet</label><br />
+    					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+    					<input type="hidden" name="type_objet" value="volet">
+    					<?php if($donnees['etat']==1){
+    					echo '<div class="bouton_etat">				
+								<input type="checkbox" value="None" id="bouton_etat" name="etat_volet" checked onchange="this.form.submit()"/>
+								<label for="bouton_etat"></label>
+							</div>';
+						}else echo '<div class="bouton_etat">		
+								<input type="checkbox" value="None" id="bouton_etat" name="etat_volet" onchange="this.form.submit()"/>
+								<label for="bouton_etat"></label>
+							</div>';
+						?>
+      				</form>
 
-       					<input type="radio" name="etat_volet" value="volet_descendu" id="volet_descendu" onchange="this.form.submit()"/> 
-       					<label for="volet_descendu">Descendre le volet</label><br />
-       					
-      					</h><br/><br/>
-      					<h> Les volets sont actuellement <strong><?php if($donnees['etat']==1){
-      						echo 'monté';}else echo 'descendus'; ?></strong> dans : </h><?php echo $donnees['lieux']; ?><br/><br/>
-					</form>
 					<form action="traitement/traitement_delete_objet.php" method="post">
-						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-      					<button type="submit">Supprimer l'objet</button>
-      				</form>	
+      					<h1> Supprimer l'objet :</h1>
+      					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+      					<div class="bouton_supp">	
+							<input type="checkbox" value="None" id="bouton_supp" name="check" onchange="this.form.submit()"/>
+							<label for="bouton_supp"></label>
+						</div>
+      				</form>
 				</div>
+				<div class="illustration-lumiere">
+      				<?php if($donnees['etat']==1){
+      				echo'<image class="image-liste" src="http://as-depannage.fr/images/fenetre-volet-roulant.png" width="150px" height="160px"></image>';
+      				}else echo '<image class="image-liste" src="http://www.store-volet.com/sites/all/themes/custom/store_volet/images/lames_volet_roulant_blanc.png" width="150px" height="160px"></image>';
+      				?>
+      			</div>
 			</div>
 			<?php
 			$reponse->closeCursor(); // Termine le traitement de la requête

@@ -22,7 +22,7 @@
 	<?php include("/include/Header.php"); ?>
 	<div id="pagecentrale">
 		<div id="Obj">
-			<?php
+		<?php
 			try{
 			$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');
 			}
@@ -46,7 +46,8 @@
     					<div class="lieux-objet">
     						<strong>Lumière  <?php echo $donnees['lieux']; ?></strong>
     					</div>
-    					<h> Vous souhaitez modifier l'etat de votre éclairage, faite le grace au bouton ON/OFF :<br />
+    					<br>
+    					<h1> Vous souhaitez modifier l'etat de votre éclairage :</h1>
     					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
     					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
     					<input type="hidden" name="type_objet" value="lumiere">
@@ -61,8 +62,9 @@
 							</div>';
 						?>
       				</form>
-      				<h> Vous souhaitez supprimer cet objet, il vous suffit de faire glisser l'icone ci-dessous :<br />
+      				
       				<form action="traitement/traitement_delete_objet.php" method="post">
+      					<h1> Supprimer l'objet :</h1>
       					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
       					<div class="bouton_supp">	
@@ -72,6 +74,10 @@
       				</form>	
       			</div>
       			<div class="illustration-lumiere">
+      				<?php if($donnees['etat']==1){
+      				echo'<image class="image-liste" src="http://www.icone-png.com/png/15/14645.png" width="150px" height="160px"></image>';
+      				}else echo '<image class="image-liste" src="http://www.icone-png.com/png/15/14621.png" width="150px" height="160px"></image>';
+      				?>
       			</div>
 			</div>
 			<?php

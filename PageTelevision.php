@@ -21,7 +21,7 @@
 <body>
 	<?php include("/include/Header.php"); ?>
 	<div id="pagecentrale">
-		<div id="Liste_objets">
+		<div id="Obj">
         <?php
 			try
 			{$bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');}
@@ -42,32 +42,46 @@
         	<div id="Television">
 				<div class="television">
 					<form action="traitement/traitement_update_objet.php" method="post">
-						<h3><strong> Télévision <?php echo $donnees['lieux']; ?></strong> </h3>
-						<h> Indiquer quel est l'état que vous souhaitiez : <br/><br/></h>
+						<div class="lieux-objet">
+							<strong> Télévision <?php echo $donnees['lieux']; ?></strong>
+						</div>
+						<h1> Vous souhaitez modifier l'etat de votre télévision :</h1>
+						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+    					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+    					<input type="hidden" name="type_objet" value="television">
+    					<?php if($donnees['etat']==1){
+    					echo '<div class="bouton_etat">				
+								<input type="checkbox" value="None" id="bouton_etat" name="etat_television" checked onchange="this.form.submit()"/>
+								<label for="bouton_etat"></label>
+							</div>';
+						}else echo '<div class="bouton_etat">		
+								<input type="checkbox" value="None" id="bouton_etat" name="etat_television" onchange="this.form.submit()"/>
+								<label for="bouton_etat"></label>
+							</div>';
+						?>
+      				</form>
+
 						<h> La Chaine actuelle est : <?php echo $donnees['chaine']; ?></h><br/>
 						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
 						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-						<input class="bouton_chaine" type="form" name="chaine_television" value="Entrer la chaîne choisi" id = "bouton_chaine" onchange="this.form.submit()"/><br/><br/>
-						
-       					<form action="traitement/traitement_update_objet.php" method="post">
-       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-       					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-       					<input type="radio" name="etat_television" value="television_allumee" id="television_allumee" onchange="this.form.submit()"/> 
-       					<label for="television_allumee">Allumer la télévision</label><br />
-
-       					<input type="radio" name="etat_television" value="television_eteinte" id="television_eteinte" onchange="this.form.submit()"/> 
-       					<label for="television_eteinte">Eteindre la télevision</label><br />
-       					
-      					</h><br/><br/>
-      					<h> La télévision est actuellement <strong><?php if($donnees['etat']==1){
-      					echo 'allumé';}else echo 'éteinte'; ?></strong></h><br/><br/>
-					</form>
+						<input class="bouton_chaine" type="form" name="chaine_television" id = "bouton_chaine" onchange="this.form.submit()"/><br/><br/>
+					
 					<form action="traitement/traitement_delete_objet.php" method="post">
-						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-      					<button type="submit">Supprimer l'objet</button>
+      					<h1> Supprimer l'objet :</h1>
+      					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+      					<div class="bouton_supp">	
+							<input type="checkbox" value="None" id="bouton_supp" name="check" onchange="this.form.submit()"/>
+							<label for="bouton_supp"></label>
+						</div>
       				</form>	
 				</div>
+				<div class="illustration-lumiere">
+      				<?php if($donnees['etat']==1){
+      				echo'<image class="image-liste" src="http://tvr7.net/attachments/Image/3-2-television-png-clipart.png?template=generic" width="150px" height="160px"></image>';
+      				}else echo '<image class="image-liste" src="https://illuminationaz.com/wp-content/uploads/2017/08/tv-xxl.png" width="150px" height="160px"></image>';
+      				?>
+      			</div>
 			</div>	
 			<?php
 			$reponse->closeCursor();

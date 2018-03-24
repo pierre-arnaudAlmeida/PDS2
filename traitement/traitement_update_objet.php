@@ -38,9 +38,8 @@ try
 	}
 
 	
+	if($type_objet=='television'){
 	if(isset($_POST['etat_television'])){
-		$etat_television=$_POST['etat_television'];
-		if($etat_television=='television_allumee'){
 			$etat_television=1;
 		}else $etat_television=0;
 		$req = $bdd->prepare('UPDATE objet SET etat = :etat WHERE id_objet = :id_objet');
@@ -65,9 +64,8 @@ try
 	header('Location: \PDS2\PageTelevision.php');
 	}
 
-	if(isset($_POST['etat_volet'])){
-		$etat_volet=$_POST['etat_volet'];
-		if($etat_volet=='volet_monte'){
+	if($type_objet=='volet'){
+		if(isset($_POST['etat_volet'])){
 			$etat_volet=1;
 		}else $etat_volet=0;
 		$req = $bdd->prepare('UPDATE objet SET etat = :etat WHERE id_objet = :id_objet');
@@ -91,6 +89,7 @@ try
 			));
 	header('Location: \PDS2\PageVolet.php');
 	}
+
 	if($type_objet=='lumiere'){
 	if(isset($_POST['etat_lumiere'])){
 			$etat_lumiere=1;
