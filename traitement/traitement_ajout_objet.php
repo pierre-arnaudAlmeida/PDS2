@@ -27,14 +27,12 @@
               $reponse->execute(array(
                 'id' => $id
               ));
-
-              // On affiche chaque entrée une à une
               while ($donnees = $reponse->fetch())
               {
               	$argent= $donnees['argent'];
               }
               
-              $reponse->closeCursor(); // Termine le traitement de la requête
+              $reponse->closeCursor();
 
  		if($type_objet=='lumiere'){
  			$prix = 15;
@@ -65,7 +63,7 @@
 		'argent' =>$montant,
 		'id' => $id
 	));
-		}
+		}else header('Location: \PDS2\PageAjouterArgent.php');
 		
 		
 ?>	

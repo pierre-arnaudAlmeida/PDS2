@@ -41,10 +41,10 @@
     <div id="Cadre-etat_objet">
       <div class="pays">
         <h4></strong>Etat de l'objet</strong></h4>
-        <input type="radio" name="etat_objet" value="allumee" id="allumee"/> 
+        <input type="radio" name="etat_objet" value="allumee" id="allumee" required/> 
         <label for="allumee">Allumé/Monté</label><br />
                   
-        <input type="radio" name="etat_objet" value="eteint" id="eteint"/> 
+        <input type="radio" name="etat_objet" value="eteint" id="eteint" required/> 
         <label for="eteinte">Eteinte/Descendu</label><br />
       </div>
     </div>

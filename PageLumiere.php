@@ -59,7 +59,7 @@
       					<h> La lumière est actuellement <strong><?php if($donnees['etat']==1){
       						echo 'allumé';}else echo 'éteinte'; ?></strong> dans : </h><?php echo $donnees['lieux']; ?> <br/><br/>
       				</form>
-      				<form action="traitement_delete_objet.php" method="post">
+      				<form action="traitement/traitement_delete_objet.php" method="post">
       					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
       					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
       					<button type="submit">Supprimer l'objet</button>
