@@ -1,6 +1,7 @@
 <?php
 	session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr-FR">
 <head>
@@ -14,26 +15,30 @@
 	<link rel="stylesheet" href="style/compte.css" />
 	<link rel="stylesheet" href="style/footer.css" />
 	<link rel="stylesheet" href="style/argent.css" />
-	<link rel="stylesheet" href="style/liste.css" />   
-
-	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
+	<link rel="stylesheet" href="style/liste.css" /> 
 </head>
+
 <body>
 	<?php include("/include/Header.php"); ?>
-		<div id="pagecentrale">
-			<div id="page_objet">
-			<div class="Titre-page">
-				<h1><strong>Page affichant les Objets connectés</strong></h1>
-				<p>Bonjour, pour vous renseigner sur un objet ou pour obtenir une information plus précise, interragissez avec le nom de l'objet en question</p>
-			</div>
-
-			<div class ="Ajout-PageObjets">
-				<?php include("/include/Liste_Objets.php"); ?>
-			</div>
-
+	<div id="pagecentrale">
+		<div class="Information">
+		<h1><strong>Informations</strong></h1></br>
+		<h2>Ici, vous pouvez vous renseignez sur des points précis </h2></br>
 		</div>
+		
+		<div class="informations">
+				<li><ul>Lumière</ul></li>
+				<li><ul>Télévision</ul></li>
+				<li><ul>Volet</ul></li>
+				<li><ul>Ajouter un objet</ul></li>
+				<li><ul>Supprimer un objet</ul></li>
 		</div>
+	
+	</div>
+
+
 
 </body>
-	<?php include("/include/Footer.php"); ?>
+
+<?php include("/include/Footer.php"); ?>
 </html>

@@ -17,7 +17,7 @@
 	align-items: center;
 	width: 50%;
 }
-h3{
+span{
 	border:3px black solid;
 	border-radius: 20px;
 	padding-left: 30px;
@@ -251,4 +251,39 @@ input[type=checkbox] {
 }
 .bouton_supp input[type=checkbox]:checked + label:after {
 	background: #00bf00;
+}
+
+/* ------------------------------------Partie Objets page PHP (Raymond)-----------------------
+----------------------------------------------------------------------------------- */
+
+#page_objet{
+	display: flex;
+	flex-wrap :wrap;
+	justify-content: center;
+}
+
+.Titre-page{
+	justify-content: center;
+}
+
+.Ajout-PageObjets{
+	margin: auto;
+}
+
+.lien {
+    display: inline-block;
+}
+
+.lien-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.lien:hover .lien-content {
+    display: block;
 }

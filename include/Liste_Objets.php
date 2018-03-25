@@ -14,12 +14,13 @@ catch(Exception $e)
 		if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 		echo '<a href="PageListe_Lumiere.php" class="Lumiere-logo">
 			<image src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" width="170" height="170"></image></a>
+
 		';}else {echo '<image src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" width="170" height="170"></image>
 		';}
 		?>
 		</div>
 		<div class="lien">
-			<h3><?php
+			<span><?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 				$type_objet='lumiere';
 				$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
@@ -30,21 +31,27 @@ catch(Exception $e)
 				$nblumiere = $reponse ->rowCount();
 			echo $nblumiere;
 			}
-			?> Lumieres</h3>
-		</div>
-	</div>
+			?> Lumieres</span>
+   <div class="lien-content">
+    <p>Ceci permet d'activer ou d'éteindre une lumière</p>
+   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
+  </div>
+</div>
+</div>
 
 	<div id="Objet">
 		<div class="logo-objet">
 			<?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 			echo '<a href="PageListe_Volet.php" class="Volet-logo" name="type_objet" value="volet"><image src="http://www.valferm.fr/wp-content/themes/valferm/images/produit/volet-bois/01-volets-bois-a-cles.png" width="170" height="170"></image></a>
+	
 			';}else {echo '<image src="http://www.valferm.fr/wp-content/themes/valferm/images/produit/volet-bois/01-volets-bois-a-cles.png" width="170" height="170"></image>
+					
 			';}
 		?>
 		</div>
 		<div class="lien">
-			<h3><?php
+			<span><?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 			$type_objet='volet';
 			$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
@@ -55,21 +62,25 @@ catch(Exception $e)
 			$nbvolet = $reponse ->rowCount();
 			echo $nbvolet; 
 			}
-			?> Volets</h3>
-		</div>
-	</div>
-
+			?> Volets</span>
+  <div class="lien-content">
+    <p>Ceci permet de monter ou de descendre un volet</p>
+   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
+  </div>
+</div>
+</div>
 	<div id="Objet">
 		<div class="logo-objet">
 		<?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 			echo '<a href="PageListe_Television.php" class="Television-logo" name="type_objet" value="television"><image src="https://vignette.wikia.nocookie.net/fictspedia/images/4/42/ITV.001_samsung_d8000_side1.png/revision/latest?cb=20140908234619" width="170" height="170"></image>
+				
 			';}else {echo '<image src="https://vignette.wikia.nocookie.net/fictspedia/images/4/42/ITV.001_samsung_d8000_side1.png/revision/latest?cb=20140908234619" width="170" height="170"></image>
 			';}
 			?>
 		</div>
 		<div class="lien">
-			<h3><?php
+			<span><?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 			$type_objet='television';
 			$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
@@ -80,10 +91,13 @@ catch(Exception $e)
 			$nbtelevision = $reponse ->rowCount();
 			echo $nbtelevision; 
 			}
-			?> Télévision</h3>
-		</div>
-	</div>
-
+			?> Télévision</span>
+  <div class="lien-content">
+    <p>Ceci permet d'activer ou d'éteindre une télévision</p>
+   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
+  </div>
+</div>
+</div>
 	<div id="Objet">
 		<div class="logo-objet">
 			<?php
@@ -95,7 +109,12 @@ catch(Exception $e)
 			?>
 		</div>
 		<div class="lien">
-			<h3>Ajouter Objet</h3>
-		</div>
-	</div>
+			<span>Ajouter Objet</span>
+  <div class="lien-content">
+    <p>Ceci permet d'ajouter un objet de votre choix</p>
+   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
+  </div>
+</div>
+</div>
+
 </div>
