@@ -7,6 +7,7 @@
 		<a href="PageObjets.php"><image src="http://www.arinluzien.fr/fs/Root/d7mz7-fleche_noire.png" width="20" height="20"></image><a2> Objets</a2></a>
 		<a href="PageConnexion.php"><image src="http://www.arinluzien.fr/fs/Root/d7mz7-fleche_noire.png" width="20" height="20"></image><a2> Connexion</a2></a>
 		<a href="PageInscription.php"><image src="http://www.arinluzien.fr/fs/Root/d7mz7-fleche_noire.png" width="20" height="20"></image><a2> S'inscrire</a2></a>
+		<a href="PageInformation.php"><image src="http://www.arinluzien.fr/fs/Root/d7mz7-fleche_noire.png" width="20" height="20"></image><a2> Informations</a2></a></br>
 	</div>
 
 	<div id="reseaux">
