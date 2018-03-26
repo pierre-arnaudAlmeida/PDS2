@@ -91,7 +91,7 @@ span{
 .illustration-lumiere{
 	display: flex;
 	flex-direction: column;
-	align-self: center;
+	align-items: center;
 	justify-content: center;
 	margin-left: 15px;
 	width: 50%;
