@@ -1,8 +1,9 @@
 <?php
+
+if ( (session_status() == 0) or (session_status() == 1)){
 	session_start();
-	if($_SESSION['nom']==null){
-		$_SESSION['nom']='Bel(le) inconnu(e)';
-	}
+	$_SESSION['nom']='Bel(le) inconnu(e)';
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
