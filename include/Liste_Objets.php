@@ -114,6 +114,7 @@ catch(Exception $e)
     <p>Ceci permet d'ajouter un objet de votre choix</p>
    <a href="PageInformation.php"> <p>Plus d'informations</p></a>
   </div>
+
 </div>
 </div>
 
