@@ -8,7 +8,7 @@ catch(Exception $e)
 	}
 ?>
 <div id="Liste_objets">
-	<div id="Objet">
+	<div class="Objet">
 		<div class="logo-objet">
 		<?php
 		if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
@@ -39,7 +39,7 @@ catch(Exception $e)
 </div>
 </div>
 
-	<div id="Objet">
+	<div class="Objet">
 		<div class="logo-objet">
 			<?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
@@ -68,8 +68,8 @@ catch(Exception $e)
    <a href="PageInformation.php"> <p>Plus d'informations</p></a>
   </div>
 </div>
-</div>
-	<div id="Objet">
+</div id="Objet">
+	<div class="Objet">
 		<div class="logo-objet">
 		<?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
@@ -98,7 +98,7 @@ catch(Exception $e)
   </div>
 </div>
 </div>
-	<div id="Objet">
+	<div class="Objet">
 		<div class="logo-objet">
 			<?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){

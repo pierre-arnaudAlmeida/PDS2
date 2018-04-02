@@ -8,6 +8,7 @@
 	width: 80%;
 	height: 140px;
 	background-color: #BDBDBD;
+	z-index: 10;
 }
 .header {
   	background-color: #f1f1f1;

@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<?php include("/include/Header.php"); ?>
+	<?php include("include/Header.php"); ?>
 	<div id="pagecentrale">
 		<div class="Information">
 		<h1><strong>Informations</strong></h1></br>
@@ -40,5 +40,5 @@
 
 </body>
 
-<?php include("/include/Footer.php"); ?>
+<?php include("include/Footer.php"); ?>
 </html>

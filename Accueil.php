@@ -26,7 +26,7 @@ if ( (session_status() == 0) or (session_status() == 1)){
 
 </head>
 <body>
-	<?php include("/include/Header.php"); ?>
+	<?php include("include/Header.php"); ?>
 		<div id="pageaccueil">
 			<div id="Nav2">
 				<h5>Bienvenue sur DEVICE MANAGER</h5>
@@ -36,5 +36,5 @@ if ( (session_status() == 0) or (session_status() == 1)){
 			<script language="javascript">StartAnim();</script>
 		</div>
 </body>
-	<?php include("/include/Footer.php"); ?>
+	<?php include("include/Footer.php"); ?>
 </html>

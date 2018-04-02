@@ -19,7 +19,7 @@
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
 <body>
-	<?php include("/include/Header.php"); ?>
+	<?php include("include/Header.php"); ?>
 	<div id="pagecentrale">
 		<div id="Obj">
         <?php
@@ -85,5 +85,5 @@
         </div>
 	</div>
 </body>
-	<?php include("/include/Footer.php"); ?>
+	<?php include("include/Footer.php"); ?>
 </html>

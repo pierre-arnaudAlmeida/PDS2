@@ -19,9 +19,9 @@ session_start()
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
 <body>
-	<?php include("/include/Header.php"); ?>
+	<?php include("include/Header.php"); ?>
 		<div id="pageconnexion">
-			<?php include("/include/Connexion.php"); ?>
+			<?php include("include/Connexion.php"); ?>
 			<div id="Nav">
 				<h1>Vous avez déja un compte alors il ne vous reste plus qu'à vous connecté.</br></br>
 				Vous n'avez qu'à renseigné votre nom ainsi que votre mot de passe.</br></h1>
@@ -30,5 +30,5 @@ session_start()
 			</div>
 		</div>
 </body>
-	<?php include("/include/Footer.php"); ?>
+	<?php include("include/Footer.php"); ?>
 </html>

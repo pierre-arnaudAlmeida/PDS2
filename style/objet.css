@@ -8,15 +8,14 @@
 	font-family: Verdana;
 	width:100%;
 	height: 70%;
-	padding: 10%;
 }
 #Objet{
 	display: flex;
 	justify-content: space-around;
-	align-items: ;
-	width: 50%;
 }
-
+#Cadre-etat_objet{
+	color: white;
+}
 span{
 	border:3px black solid;
 	border-radius: 20px;
@@ -273,12 +272,13 @@ input[type=checkbox] {
 }
 .image-objet{
     position: relative;
-    width: 50%;
 }
+
 .image {
+	margin: 0 auto;
   opacity: 1;
   display: block;
-  width: 100%;
+  width: 50%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -291,7 +291,7 @@ input[type=checkbox] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%);
 }
 
 .image-objet:hover .image {
@@ -307,4 +307,12 @@ input[type=checkbox] {
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+}
+
+#cadre-argent > * {
+	margin: 5% 0;
+}
+
+.Objet {
+	margin: 0 25px;
 }

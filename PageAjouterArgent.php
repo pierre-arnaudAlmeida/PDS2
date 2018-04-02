@@ -19,7 +19,7 @@ session_start();
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
 <body>
-	<?php include("/include/Header.php"); ?>
+	<?php include("include/Header.php"); ?>
 		<div id="pageconnexion">
 			<div id="Argent-compte">
 				<div class="Argent">
@@ -68,5 +68,5 @@ session_start();
 			</div>
 		</div>
 </body>
-	<?php include("/include/Footer.php"); ?>
+	<?php include("include/Footer.php"); ?>
 </html>

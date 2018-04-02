@@ -19,9 +19,9 @@
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
 <body>
-	<?php include("/include/Header.php"); ?>
+	<?php include("include/Header.php"); ?>
 	<div id="pageinscription">
-		<?php include("/include/Inscription.php"); ?>
+		<?php include("include/Inscription.php"); ?>
 		<div id="Nav2">
 			<h1>Si vous êtes ici c'est que vous ne possédez pas encore de compte sur notre magnifique site, donc nous vous invitons à remplir ce formulaire.</br></br>
 			Nous avons quelques consignes à vous donner pour que vous puissiez remplir convenablement ce formulaire, tout d'abord il vous faut un prenom et un nom de préférence les vôtres.</br></br>
@@ -31,5 +31,5 @@
 		</div>
 	</div>
 </body>
-	<?php include("/include/Footer.php"); ?>
+	<?php include("include/Footer.php"); ?>
 </html>

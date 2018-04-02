@@ -19,7 +19,7 @@
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
 </head>
 <body>
-	<?php include("/include/Header.php"); ?>
+	<?php include("include/Header.php"); ?>
 		<div id="pagecentrale">
 			<div id="page_objet">
 			<div class="Titre-page">
@@ -28,12 +28,12 @@
 			</div>
 
 			<div class ="Ajout-PageObjets">
-				<?php include("/include/Liste_Objets.php"); ?>
+				<?php include("include/Liste_Objets.php"); ?>
 			</div>
 
 		</div>
 		</div>
 
 </body>
-	<?php include("/include/Footer.php"); ?>
+	<?php include("include/Footer.php"); ?>
 </html>

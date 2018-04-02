@@ -1,6 +1,6 @@
 <div id="Objet">
       
-  <form action="traitement/traitement_ajout_objet.php" method="post">
+  <form action="traitement/traitement_ajout_objet.php" method="post" id="cadre-argent" class="p-3">
     <div id="Cadre-telephone">
       <div class="telephone">
         <?php
@@ -30,32 +30,32 @@
     </div>
 
 
-    <div id="Cadre-pays">
+    <div id="Cadre-etat_objet">
       <div class="pays">
         <h>Lieux</h>
         <input type="select" name="Lieux" required /> <br/> 
       </div>
     </div>
 
-    <div id="cadre-objet">
-      <div class="image-objet">
-        <img src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" alt="Avatar" class="image" style="width:100%">
+    <div id="cadre-objet" class="row">
+      <div class="image-objet col-sm-4">
+        <img src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" alt="Avatar" class="image">
         <div class="cadre">
           <input type="radio" name="type_objet" value="lumiere" id="lumiere" required/> 
           <label for="lumiere">Lumiere 15 €</label><br/></a>
         </div>
       </div>
 
-      <div class="image-objet">
-        <img src="http://www.valferm.fr/wp-content/themes/valferm/images/produit/volet-bois/01-volets-bois-a-cles.png"  class="image" alt="Avatar" style="width:100%">
+      <div class="image-objet col-sm-4">
+        <img src="http://www.valferm.fr/wp-content/themes/valferm/images/produit/volet-bois/01-volets-bois-a-cles.png"  class="image" alt="Avatar">
         <div class="cadre">
           <input type="radio" name="type_objet" value="volet" id="volet" required/> 
           <label for="volet">Volet 75 €</label><br/>
         </div>
       </div>
 
-      <div class="image-objet">
-        <img src="https://vignette.wikia.nocookie.net/fictspedia/images/4/42/ITV.001_samsung_d8000_side1.png/revision/latest?cb=20140908234619" alt="Avatar" class="image" style="width:100%">
+      <div class="image-objet col-sm-4">
+        <img src="https://vignette.wikia.nocookie.net/fictspedia/images/4/42/ITV.001_samsung_d8000_side1.png/revision/latest?cb=20140908234619" alt="Avatar" class="image">
         <div class="cadre">
           <input type="radio" name="type_objet" value="television" id="television" required/> 
           <label for="television">Television 175 €</label><br/>
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div id="Cadre-telephone">
+    <div id="Cadre-etat_objet">
       <div class="telephone"> 
         <h>Chaine Tv</h>
         <input type="number" name="chaine" />  
