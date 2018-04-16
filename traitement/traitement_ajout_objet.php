@@ -45,8 +45,29 @@
  		}
 
 
- 		if ($argent>$prix){
-		$req2 = $bdd->prepare('INSERT INTO objet(id,type_objet,etat,lieux,chaine) VALUES(:id,:type_objet,:etat,:lieux,:chaine)');
+ 		if ($argent>=$prix){
+ 		if($type_objet=='lumiere'){
+		$req2 = $bdd->prepare('INSERT INTO lumiere(id,type_objet,etat,lieux) VALUES(:id,:type_objet,:etat,:lieux)');
+		$req2->execute(array(
+		'id' =>$id,
+		'type_objet'=>$type_objet,
+		'etat'=>$etat_objet,
+		'lieux'=>$lieux
+		));
+		header('Location: \PDS2\PageObjets.php');
+		}
+		if($type_objet=='volet'){
+			$req2 = $bdd->prepare('INSERT INTO volet(id,type_objet,etat,lieux) VALUES(:id,:type_objet,:etat,:lieux)');
+			$req2->execute(array(
+		'id' =>$id,
+		'type_objet'=>$type_objet,
+		'etat'=>$etat_objet,
+		'lieux'=>$lieux
+		));
+		header('Location: \PDS2\PageObjets.php');
+		}
+		if ($type_objet=='television'){
+			$req2 = $bdd->prepare('INSERT INTO television(id,type_objet,etat,lieux,chaine) VALUES(:id,:type_objet,:etat,:lieux,:chaine)');
 		$req2->execute(array(
 		'id' =>$id,
 		'type_objet'=>$type_objet,
@@ -55,6 +76,8 @@
 		'chaine'=>$chaine
 		));
 		header('Location: \PDS2\PageObjets.php');
+		}
+		
 
 		$montant = ($argent-$prix);
 

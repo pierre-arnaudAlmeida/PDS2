@@ -31,7 +31,7 @@
 			if (isset($_POST['id_objet'])) {
 				$id_objet=$_POST['id_objet'];
 			}else ($id_objet=$_SESSION['id_objet']);
-			$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
+			$reponse = $bdd->prepare('SELECT * FROM television WHERE (id= :id AND type_objet= :type_objet AND id_televison= :id_objet)');
 			$reponse->execute(array(
     		'id' => $_SESSION['id'],
    			'type_objet' =>$type_objet,
@@ -46,8 +46,8 @@
 							<strong> Télévision <?php echo $donnees['lieux']; ?></strong>
 						</div>
 						<h1> Vous souhaitez modifier l'etat de votre télévision :</h1>
-						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-    					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_televison']?>">
+    					<?php $_SESSION['id_objet']=$donnees['id_televison']?>
     					<input type="hidden" name="type_objet" value="television">
     					<?php if($donnees['etat']==1){
     					echo '<div class="bouton_etat">				
@@ -62,14 +62,15 @@
       				</form>
 
 						<h> La Chaine actuelle est : <?php echo $donnees['chaine']; ?></h><br/>
-						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-						<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+						<input type="hidden" name="id_objet" value="<?php echo $donnees['id_televison']?>">
+						<?php $_SESSION['id_objet']=$donnees['id_televison']?>
 						<input class="bouton_chaine" type="form" name="chaine_television" id = "bouton_chaine" onchange="this.form.submit()"/><br/><br/>
 					
 					<form action="traitement/traitement_delete_objet.php" method="post">
       					<h1> Supprimer l'objet :</h1>
-      					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+      					<?php $_SESSION['id_objet']=$donnees['id_televison']?>
+      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_televison']?>">
+      					<input type="hidden" name="type_objet" value="<?php echo $donnees['type_objet']?>">
       					<div class="bouton_supp">	
 							<input type="checkbox" value="None" id="bouton_supp" name="check" onchange="this.form.submit()"/>
 							<label for="bouton_supp"></label>

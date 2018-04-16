@@ -23,7 +23,7 @@ catch(Exception $e)
 			<span><?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 				$type_objet='lumiere';
-				$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
+				$reponse = $bdd->prepare('SELECT * FROM lumiere WHERE id= :id AND type_objet= :type_objet');
 				$reponse->execute(array(
     			'id' => $_SESSION['id'],
     			'type_objet' =>$type_objet
@@ -54,7 +54,7 @@ catch(Exception $e)
 			<span><?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 			$type_objet='volet';
-			$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
+			$reponse = $bdd->prepare('SELECT * FROM volet WHERE id= :id AND type_objet= :type_objet');
 			$reponse->execute(array(
     		'id' => $_SESSION['id'],
     		'type_objet' =>$type_objet
@@ -83,7 +83,7 @@ catch(Exception $e)
 			<span><?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 			$type_objet='television';
-			$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
+			$reponse = $bdd->prepare('SELECT * FROM volet WHERE id= :id AND type_objet= :type_objet');
 			$reponse->execute(array(
     		'id' => $_SESSION['id'],
     		'type_objet' =>$type_objet

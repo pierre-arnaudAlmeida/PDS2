@@ -11,8 +11,17 @@ try
 	}
 
 	$id_objet=$_POST['id_objet'];
+	$type_objet=$_POST['type_objet'];
 
-	$req = $bdd->prepare('DELETE FROM objet WHERE id_objet= :id_objet');
+	if($type_objet=='lumiere'){
+	$req = $bdd->prepare('DELETE FROM lumiere WHERE id_lumiere= :id_objet');
+	}
+	if($type_objet=='volet'){
+	$req = $bdd->prepare('DELETE FROM volet WHERE id_volet= :id_objet');
+	}
+	if($type_objet=='television'){
+	$req = $bdd->prepare('DELETE FROM television WHERE id_television= :id_objet');
+	}
 		$req->execute(array(
 		'id_objet' => $id_objet
 	));

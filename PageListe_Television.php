@@ -33,7 +33,7 @@
 				catch(Exception $e)
 				{die('Erreur : '.$e->getMessage());}
 				$type_objet='television';
-				$reponse = $bdd->prepare('SELECT * FROM objet WHERE id= :id AND type_objet= :type_objet');
+				$reponse = $bdd->prepare('SELECT * FROM television WHERE id= :id AND type_objet= :type_objet');
 				$reponse->execute(array(
     			'id' => $_SESSION['id'],
     			'type_objet' =>$type_objet
@@ -48,8 +48,8 @@
     			</div>		
 				<div class="bouton_selectionner">
 					<form action="PageTelevision.php" method="post">
-      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-      					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_television']?>">
+      					<?php $_SESSION['id_objet']=$donnees['id_television']?>
       					<button class="selectionner" type="submit">Selectionner</button>
       				</form>
       			</div>

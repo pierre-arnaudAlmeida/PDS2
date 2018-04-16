@@ -15,12 +15,12 @@ try
 
 	if(isset($_POST['chaine_television'])){
 	$chaine=$_POST['chaine_television'];
-	$req = $bdd->prepare('UPDATE objet SET chaine = :chaine WHERE id_objet = :id_objet');
+	$req = $bdd->prepare('UPDATE television SET chaine = :chaine WHERE id_television = :id_objet');
 		$req->execute(array(
 		'chaine' => $chaine,
 		'id_objet' => $id_objet
 	));
-	$reponse = $bdd->prepare('SELECT * FROM objet WHERE id_objet= :id_objet');
+	$reponse = $bdd->prepare('SELECT * FROM television WHERE id_television= :id_objet');
 				$reponse->execute(array(
     			'id_objet' => $id_objet
    				));
@@ -28,7 +28,7 @@ try
 			$req2 = $bdd->prepare('INSERT INTO historique(id, id_objet,type_objet,etat,lieux,chaine,date_insertion) VALUES(:id,:id_objet,:type_objet,:etat,:lieux,:chaine, NOW())');
 			$req2->execute(array(
 			'id' =>$donnees['id'],
-			'id_objet'=>$donnees['id_objet'],
+			'id_objet'=>$donnees['id_television'],
 			'type_objet'=>$donnees['type_objet'],
 			'etat'=>$donnees['etat'],
 			'lieux'=>$donnees['lieux'],
@@ -42,12 +42,12 @@ try
 	if(isset($_POST['etat_television'])){
 			$etat_television=1;
 		}else $etat_television=0;
-		$req = $bdd->prepare('UPDATE objet SET etat = :etat WHERE id_objet = :id_objet');
+		$req = $bdd->prepare('UPDATE television SET etat = :etat WHERE id_television = :id_objet');
 		$req->execute(array(
 		'etat' => $etat_television,
 		'id_objet' => $id_objet
 	));
-		$reponse = $bdd->prepare('SELECT * FROM objet WHERE id_objet= :id_objet');
+		$reponse = $bdd->prepare('SELECT * FROM television WHERE id_television= :id_objet');
 				$reponse->execute(array(
     			'id_objet' => $id_objet
    				));
@@ -55,7 +55,7 @@ try
 			$req2 = $bdd->prepare('INSERT INTO historique(id, id_objet,type_objet,etat,lieux,chaine,date_insertion) VALUES(:id,:id_objet,:type_objet,:etat,:lieux,:chaine, NOW())');
 			$req2->execute(array(
 			'id' =>$donnees['id'],
-			'id_objet'=>$donnees['id_objet'],
+			'id_objet'=>$donnees['id_television'],
 			'type_objet'=>$donnees['type_objet'],
 			'etat'=>$donnees['etat'],
 			'lieux'=>$donnees['lieux'],
@@ -68,24 +68,24 @@ try
 		if(isset($_POST['etat_volet'])){
 			$etat_volet=1;
 		}else $etat_volet=0;
-		$req = $bdd->prepare('UPDATE objet SET etat = :etat WHERE id_objet = :id_objet');
+		$req = $bdd->prepare('UPDATE volet SET etat = :etat WHERE id_volet = :id_objet');
 		$req->execute(array(
 		'etat' => $etat_volet,
 		'id_objet' => $id_objet
 	));
-		$reponse = $bdd->prepare('SELECT * FROM objet WHERE id_objet= :id_objet');
+		$reponse = $bdd->prepare('SELECT * FROM volet WHERE id_volet= :id_objet');
 				$reponse->execute(array(
     			'id_objet' => $id_objet
    				));
    			$donnees = $reponse->fetch();
-			$req2 = $bdd->prepare('INSERT INTO historique(id, id_objet,type_objet,etat,lieux,chaine,date_insertion) VALUES(:id,:id_objet,:type_objet,:etat,:lieux,:chaine, NOW())');
+			$req2 = $bdd->prepare('INSERT INTO historique(id, id_objet,type_objet,etat,lieux,date_insertion) VALUES(:id,:id_objet,:type_objet,:etat,:lieux, NOW())');
 			$req2->execute(array(
 			'id' =>$donnees['id'],
-			'id_objet'=>$donnees['id_objet'],
+			'id_objet'=>$donnees['id_volet'],
 			'type_objet'=>$donnees['type_objet'],
 			'etat'=>$donnees['etat'],
 			'lieux'=>$donnees['lieux'],
-			'chaine'=>$donnees['chaine']
+			'chaine'=>0
 			));
 	header('Location: \PDS2\PageVolet.php');
 	}
@@ -94,24 +94,23 @@ try
 	if(isset($_POST['etat_lumiere'])){
 			$etat_lumiere=1;
 		}else $etat_lumiere=0;
-		$req = $bdd->prepare('UPDATE objet SET etat = :etat WHERE id_objet = :id_objet');
+		$req = $bdd->prepare('UPDATE lumiere SET etat = :etat WHERE id_lumiere = :id_objet');
 		$req->execute(array(
 		'etat' => $etat_lumiere,
 		'id_objet' => $id_objet
 	));
-		$reponse = $bdd->prepare('SELECT * FROM objet WHERE id_objet= :id_objet');
+		$reponse = $bdd->prepare('SELECT * FROM lumiere WHERE id_lumiere= :id_objet');
 				$reponse->execute(array(
     			'id_objet' => $id_objet
    				));
    			$donnees = $reponse->fetch();
-			$req2 = $bdd->prepare('INSERT INTO historique(id, id_objet,type_objet,etat,lieux,chaine,date_insertion) VALUES(:id,:id_objet,:type_objet,:etat,:lieux,:chaine, NOW())');
+			$req2 = $bdd->prepare('INSERT INTO historique(id, id_objet,type_objet,etat,lieux,date_insertion) VALUES(:id,:id_objet,:type_objet,:etat,:lieux, NOW())');
 			$req2->execute(array(
 			'id' =>$donnees['id'],
-			'id_objet'=>$donnees['id_objet'],
+			'id_objet'=>$donnees['id_lumiere'],
 			'type_objet'=>$donnees['type_objet'],
 			'etat'=>$donnees['etat'],
 			'lieux'=>$donnees['lieux'],
-			'chaine'=>$donnees['chaine']
 			));
 	header('Location: \PDS2\PageLumiere.php');
 	}

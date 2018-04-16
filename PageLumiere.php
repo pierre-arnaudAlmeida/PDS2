@@ -32,7 +32,7 @@
 			if (isset($_POST['id_objet'])) {
 				$id_objet=$_POST['id_objet'];
 			}else ($id_objet=$_SESSION['id_objet']);
-			$reponse = $bdd->prepare('SELECT * FROM objet WHERE (id= :id AND type_objet= :type_objet AND id_objet= :id_objet)');
+			$reponse = $bdd->prepare('SELECT * FROM lumiere WHERE (id= :id AND type_objet= :type_objet AND id_lumiere= :id_objet)');
 			$reponse->execute(array(
     		'id' => $_SESSION['id'],
     		'type_objet' =>$type_objet,
@@ -48,8 +48,8 @@
     					</div>
     					<br>
     					<h1> Vous souhaitez modifier l'etat de votre éclairage :</h1>
-    					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
-    					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
+    					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_lumiere']?>">
+    					<?php $_SESSION['id_objet']=$donnees['lumiere']?>
     					<input type="hidden" name="type_objet" value="lumiere">
     					<?php if($donnees['etat']==1){
     					echo '<div class="bouton_etat">				
@@ -65,8 +65,9 @@
       				
       				<form action="traitement/traitement_delete_objet.php" method="post">
       					<h1> Supprimer l'objet :</h1>
-      					<?php $_SESSION['id_objet']=$donnees['id_objet']?>
-      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_objet']?>">
+      					<?php $_SESSION['id_objet']=$donnees['id_lumiere']?>
+      					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_lumiere']?>">
+      					<input type="hidden" name="type_objet" value="<?php echo $donnees['type_objet']?>">
       					<div class="bouton_supp">	
 							<input type="checkbox" value="None" id="bouton_supp" name="check" onchange="this.form.submit()"/>
 							<label for="bouton_supp"></label>
