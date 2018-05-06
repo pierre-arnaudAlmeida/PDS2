@@ -4,8 +4,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=pds;charset=utf8', 'root', '');}
 catch(Exception $e)
 {die('Erreur : '.$e->getMessage());}
 	if($_SESSION['nom']==null){
-	$_SESSION['nom']='Bel(le) inconnu(e)';
-	}
+	$_SESSION['nom']='Bel(le) inconnu(e)';}
 ?>
 <div id="Liste_objets">
 	<div class="Objet">
@@ -14,7 +13,6 @@ catch(Exception $e)
 		if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 		echo '<a href="PageListe_Lumiere.php" class="Lumiere-logo">
 			<image src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" width="170" height="170"></image></a>
-
 		';}else {echo '<image src="https://www.lampeberger.fr/media/catalog/product/cache/1/image/740x/9df78eab33525d08d6e5fb8d27136e95/c/n/cnpl-brun.png" width="170" height="170"></image>
 		';}
 		?>
@@ -26,18 +24,17 @@ catch(Exception $e)
 				$reponse = $bdd->prepare('SELECT * FROM lumiere WHERE id= :id AND type_objet= :type_objet');
 				$reponse->execute(array(
     			'id' => $_SESSION['id'],
-    			'type_objet' =>$type_objet
-   				));
+    			'type_objet' =>$type_objet));
 				$nblumiere = $reponse ->rowCount();
 			echo $nblumiere;
 			}
 			?> Lumieres</span>
-   <div class="lien-content">
-    <p>Ceci permet d'activer ou d'éteindre une lumière</p>
-   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
-  </div>
-</div>
-</div>
+   			<div class="lien-content">
+    			<p>Ceci permet d'activer ou d'éteindre une lumière</p>
+   				<p>Plus d'informations</p>
+  			</div>
+		</div>
+	</div>
 
 	<div class="Objet">
 		<div class="logo-objet">
@@ -63,12 +60,13 @@ catch(Exception $e)
 			echo $nbvolet; 
 			}
 			?> Volets</span>
-  <div class="lien-content">
-    <p>Ceci permet de monter ou de descendre un volet</p>
-   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
-  </div>
-</div>
-</div id="Objet">
+  			<div class="lien-content">
+    			<p>Ceci permet de monter ou de descendre un volet</p>
+   				<p>Plus d'informations</p>
+  			</div>
+		</div>
+	</div>
+		
 	<div class="Objet">
 		<div class="logo-objet">
 		<?php
@@ -83,7 +81,7 @@ catch(Exception $e)
 			<span><?php
 			if ($_SESSION['nom']!='Bel(le) inconnu(e)'){
 			$type_objet='television';
-			$reponse = $bdd->prepare('SELECT * FROM volet WHERE id= :id AND type_objet= :type_objet');
+			$reponse = $bdd->prepare('SELECT * FROM television WHERE id= :id AND type_objet= :type_objet');
 			$reponse->execute(array(
     		'id' => $_SESSION['id'],
     		'type_objet' =>$type_objet
@@ -92,12 +90,13 @@ catch(Exception $e)
 			echo $nbtelevision; 
 			}
 			?> Télévision</span>
-  <div class="lien-content">
-    <p>Ceci permet d'activer ou d'éteindre une télévision</p>
-   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
-  </div>
-</div>
-</div>
+  			<div class="lien-content">
+    			<p>Ceci permet d'activer ou d'éteindre une télévision</p>
+   				<p>Plus d'informations</p>
+  			</div>
+		</div>
+	</div>
+	
 	<div class="Objet">
 		<div class="logo-objet">
 			<?php
@@ -110,12 +109,10 @@ catch(Exception $e)
 		</div>
 		<div class="lien">
 			<span>Ajouter Objet</span>
-  <div class="lien-content">
-    <p>Ceci permet d'ajouter un objet de votre choix</p>
-   <a href="PageInformation.php"> <p>Plus d'informations</p></a>
-  </div>
-
-</div>
-</div>
-
+  			<div class="lien-content">
+    			<p>Ceci permet d'ajouter un objet de votre choix</p>
+   				<p>Plus d'informations</p>
+  			</div>
+		</div>
+	</div>
 </div>

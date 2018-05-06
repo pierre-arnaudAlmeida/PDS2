@@ -15,17 +15,13 @@
       while ($donnees = $reponse->fetch())
       {
       ?>
-    
       <h6>Bonjour Mr <?php $pseudo=$_SESSION['nom'];echo $pseudo;  ?></h6>
       <h6>Argent disponible : <?php echo $donnees['argent']; ?> €</h6>
-    
       <?php
       }
       $reponse->closeCursor(); // Termine le traitement de la requête
       ?>
-
-      <a href="PageAjouterArgent.php" >
-      <h6> Ajouter de l'Argent</h6></image>  
+      <a href="PageAjouterArgent.php" ><h6> Ajouter de l'Argent</h6></image>  
       </a>
     </div>
   </div>

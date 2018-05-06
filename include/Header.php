@@ -3,12 +3,10 @@
 	<div id="entete">
 		<image src="https://www.bevywise.com/images/device-manager.png"></image>
 	</div>
-
 	<div id="navbar">
   		<div class = "onglet-accueil">
   			<a class="active" href="Accueil.php"><h1>Accueil</h1></a>
   		</div>
-
 		<div class="onglet-objet">
       		<button class="onglet-boutton"><a href="PageObjets.php">Objets</a></button>
       		<div class="onglet-objet-content">
@@ -45,15 +43,12 @@
 			}
 		?>
 	</div>
-	
 	<script >
 		window.onscroll = function() {
 			myFunction()
 		};
-
 		var navbar = document.getElementById("navbar");
 		var sticky = navbar.offsetTop;
-
 		function myFunction() {
   			if (window.pageYOffset >= sticky) {
     			navbar.classList.add("sticky")

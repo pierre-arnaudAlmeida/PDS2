@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="style/objet.css" />
 	<link rel="stylesheet" href="style/compte.css" />
 	<link rel="stylesheet" href="style/footer.css" />
-	<link rel="stylesheet" href="style/argent.css" />
 	<link rel="stylesheet" href="style/liste.css" />    
 
 	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->

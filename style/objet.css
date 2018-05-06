@@ -42,7 +42,6 @@ span{
 	width: 200px;
 }
 
-
 .pays{
 	margin: auto;
 }
@@ -85,7 +84,6 @@ span{
 #Objet-nom{
 	color: white;
 }
-
 input[type=checkbox] {
 	visibility: hidden;
 }
@@ -121,7 +119,6 @@ input[type=checkbox] {
 	z-index: 0;
 	font-weight: bold;
 }
-
 .bouton_etat label {
 	display: block;
 	width: 34px;
@@ -232,28 +229,25 @@ input[type=checkbox] {
 .bouton_supp input[type=checkbox]:checked + label:after {
 	background: #00bf00;
 }
-
 /* ------------------------------------Partie Objets page PHP (Raymond)-----------------------
 ----------------------------------------------------------------------------------- */
-
 #page_objet{
 	display: flex;
 	flex-wrap :wrap;
 	justify-content: center;
 }
-
 .Titre-page{
 	justify-content: center;
 }
-
 .Ajout-PageObjets{
 	margin: auto;
 }
-
 .lien {
     display: inline-block;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
 }
-
 .lien-content {
     display: none;
     position: absolute;
@@ -273,7 +267,6 @@ input[type=checkbox] {
 .image-objet{
     position: relative;
 }
-
 .image {
 	margin: 0 auto;
   opacity: 1;
@@ -283,7 +276,6 @@ input[type=checkbox] {
   transition: .5s ease;
   backface-visibility: hidden;
 }
-
 .cadre {
   transition: .5s ease;
   opacity: 0;
@@ -293,26 +285,26 @@ input[type=checkbox] {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-
 .image-objet:hover .image {
   opacity: 0.3;
 }
-
 .image-objet:hover .cadre {
   opacity: 1;
 }
-
 .text {
   background-color: #4CAF50;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
 }
-
 #cadre-argent > * {
 	margin: 5% 0;
 }
-
 .Objet {
-	margin: 0 25px;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	align-self: center;
+	margin-top: 100px;
 }

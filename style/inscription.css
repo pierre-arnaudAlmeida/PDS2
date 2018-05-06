@@ -116,7 +116,7 @@
 }
 .pays{
 	margin-top: 5px;
-	padding-left: 40px;
+	padding-left: 10px;
 }
 
 .ville{
@@ -129,6 +129,7 @@
 }
 .telephone{
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .bouton_inscription{
 	align-self: center;

@@ -7,16 +7,12 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="https://lh5.googleusercontent.com/-cCPFUP6eAj0/USdq5uSTKFI/AAAAAAAAAYY/3CeiAHyAiFU/s800/triboulon_white.png" type="images/png"/><link rel="stylesheet" href="style/main.css" />
 	<link rel="stylesheet" href="style/header.css" />
-	<link rel="stylesheet" href="style/inscription.css" />
-	<link rel="stylesheet" href="style/connexion.css" />
 	<link rel="stylesheet" href="style/nav.css" />
 	<link rel="stylesheet" href="style/objet.css" />
-	<link rel="stylesheet" href="style/compte.css" />
 	<link rel="stylesheet" href="style/footer.css" />
-	<link rel="stylesheet" href="style/argent.css" />
 	<link rel="stylesheet" href="style/liste.css" />   
 
-	<title>Gestionnaire d'Objets Connectés</title> <!-- titre dans l'onglet -->
+	<title>Lumière</title> <!-- titre dans l'onglet -->
 </head>
 <body>
 	<?php include("include/Header.php"); ?>
@@ -49,7 +45,7 @@
     					<br>
     					<h1> Vous souhaitez modifier l'etat de votre éclairage :</h1>
     					<input type="hidden" name="id_objet" value="<?php echo $donnees['id_lumiere']?>">
-    					<?php $_SESSION['id_objet']=$donnees['lumiere']?>
+    					<?php $_SESSION['id_objet']=$donnees['id_lumiere']?>
     					<input type="hidden" name="type_objet" value="lumiere">
     					<?php if($donnees['etat']==1){
     					echo '<div class="bouton_etat">				

@@ -123,7 +123,9 @@ a {
     text-decoration: none;
     display: block;
 }
-.onglet-objet-content a:hover {background-color: #333}
+.onglet-objet-content a:hover {
+	background-color: #333
+}
 .onglet-objet:hover .onglet-objet-content {
     display: block;
 }
